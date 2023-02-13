@@ -4,9 +4,6 @@ excerpt: "Short description"
 collection: portfolio
 ---
 
-Titanic Survival
-================
-
   
 I found an interesting historical data set about Titanic, the famous
 British luxury passenger liner that sank in
