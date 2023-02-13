@@ -1,3 +1,9 @@
+---
+title: "Carbon dioxide emissions"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+collection: portfolio
+---
+
 Change of CO<sub>2</sub> emissions per capita across countries in the
 long run
 ================
