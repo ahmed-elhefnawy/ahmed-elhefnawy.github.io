@@ -193,7 +193,7 @@ Let’s have a look then on the demand curve!
 ggplot(data=gas,mapping=aes(x=(gasq/1000),y=exp(price)))+geom_point()+geom_smooth(formula=y~x,method="lm",se=T)+scale_y_continuous(breaks=seq(0.4,0.9,by=0.1))+labs(x="Gasoline Consumption \n (in Thousands)",y="Real Gasoline Price")
 ```
 
-![](project5_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-4-111.png?raw=true)<!-- -->
 
 After we got a hint about the demand, we can try to look into the price
 elasticity of gas. We can linearly model the relationship between gas
