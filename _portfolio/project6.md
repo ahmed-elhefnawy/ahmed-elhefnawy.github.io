@@ -90,13 +90,13 @@ library(ggplot2)
 ggplot(data=TitanicSurvival,mapping=aes(x=survived))+geom_bar(aes(fill=sex))
 ```
 
-![](project6_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-2-1.png?raw=true)<!-- -->
 
 ``` r
 ggplot(data=TitanicSurvival,mapping=aes(x=survived))+geom_bar(aes(fill=passengerClass))
 ```
 
-![](project6_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-2-2.png?raw=true)<!-- -->
 
 ``` r
 #passengers' gender by class.
@@ -115,14 +115,14 @@ boxplot(TitanicSurvival$age,horizontal = T,xlab="Passengers' Age")
 abline(v=mean(TitanicSurvival$age,na.rm = T))
 ```
 
-![](project6_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-2-3.png?raw=true)<!-- -->
 
 ``` r
 #passengers' age by class.
 ggplot(data=TitanicSurvival,mapping=aes(x=age,fill=passengerClass))+geom_bar()
 ```
 
-![](project6_files/figure-gfm/unnamed-chunk-2-4.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-2-4.png?raw=true)<!-- -->
 
 As you can tell, most of the second and third class passengers were
 younger than
@@ -133,7 +133,7 @@ younger than
 ggplot(data=TitanicSurvival,mapping=aes(x=age,fill=survived))+geom_bar()
 ```
 
-![](project6_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-3-11.png?raw=true)<!-- -->
 
 ## **The Probability of survival:**
 
