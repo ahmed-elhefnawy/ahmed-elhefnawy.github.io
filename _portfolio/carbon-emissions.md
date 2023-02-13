@@ -276,7 +276,7 @@ epdfPlot(emission$change,xlab=expression('Change of CO'[2] ~ 'emissions per capi
 abline(v=mean(emission$change),col="darkgray")
 ```
 
-![](_portfolio/unnamed-chunk-5-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/_portfolio/unnamed-chunk-5-1.png)<!-- -->
 
 The dark gray vertical line represents the mean in our data, as you
 might expected from the code.
