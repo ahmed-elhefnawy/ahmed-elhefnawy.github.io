@@ -1,6 +1,8 @@
-Gasoline demand in Germany
-================
-
+---
+title: "Gasoline demand in Germany"
+excerpt: "Short description"
+collection: portfolio
+---
   
 
 We try to look into the motor gasoline demand in Germany over the period
