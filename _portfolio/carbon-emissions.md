@@ -1,7 +1,8 @@
-Change of CO<sub>2</sub> emissions per capita across countries in the
-long run
-================
-
+---
+title: "Change of CO<sub>2</sub> emissions per capita across countries in the long run"
+excerpt: "Short description"
+collection: portfolio
+---
   
 
 I wanted to see if the change of carbon dioxide emissions per capita,
