@@ -1,6 +1,8 @@
-Change of GDP per capita over time - Visualized
-================
-
+---
+title: "Change of GDP per capita over time - Visualized"
+excerpt: "Interactive visulization, using the Maddison project"
+collection: portfolio
+---
   
 
 The Maddison Project is one of the most famous projects in Economics. It
