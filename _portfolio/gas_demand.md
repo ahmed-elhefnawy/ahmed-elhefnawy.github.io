@@ -1,6 +1,6 @@
 ---
 title: "Gasoline demand in Germany"
-excerpt: "Short description"
+excerpt: "Quick estimation of the gasoline demand curve over 18-year period"
 collection: portfolio
 ---
   
