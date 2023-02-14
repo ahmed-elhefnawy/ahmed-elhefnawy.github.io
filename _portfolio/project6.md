@@ -1,24 +1,19 @@
 ---
 title: "Titanic survival"
-excerpt: "Short description"
+excerpt: "The conditional probability of survival on Titanic"
 collection: portfolio
 ---
 
   
 I found an interesting historical data set about Titanic, the famous
-British luxury passenger liner that sank in
-![1912](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1912 "1912").
+British luxury passenger liner that sank in 1912.
 The data is available in the package `carData` under the name
 `TitanicSurvival`. You can see [this
 source](https://www.britannica.com/topic/Titanic) for more historical
 information about the Titanic. But for now, let’s have a closer look at
 our data.
 
-Our data has
-![1309](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1309 "1309")
-observations of
-![1309](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1309 "1309")
-passengers on four variables: Whether each passenger survived or not,
+Our data has 1309 observations of 1309 passengers on four variables: Whether each passenger survived or not,
 the passenger gender, the age, and the passenger class: first class,
 second class, or third class.
 
@@ -64,17 +59,8 @@ summary(TitanicSurvival)
                             Max.   :80.0000                 
                             NA's   :263                     
 
-As you can see, the survivors were less than
-![40\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;40%5C%25 "40\%"),
-with the majority of passengers, more than
-![60\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;60%5C%25 "60\%"),
-being males. The passengers’ age varied from
-![2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2 "2")
-months to
-![80](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;80 "80")
-years, but note that we don’t have the age data for
-![263](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;263 "263")
-passengers, so we might have even younger or older passengers.
+As you can see, the survivors were less than 40%, with the majority of passengers, more than 60%,
+being males. The passengers’ age varied from 2 months to 80 years, but note that we don’t have the age data for 263 passengers, so we might have even younger or older passengers.
 The third class passengers were more than the first class and the second
 class passengers combined, and more than double the first-class
 passengers.
@@ -122,8 +108,7 @@ ggplot(data=TitanicSurvival,mapping=aes(x=age,fill=passengerClass))+geom_bar()
 ![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-2-4.png?raw=true)<!-- -->
 
 As you can tell, most of the second and third class passengers were
-younger than
-![40](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;40 "40").
+younger than 40.
 
 ``` r
 #passengers' age by survival proportion.
@@ -179,12 +164,7 @@ mean(TitanicSurvival$survived=="yes")
     [1] 0.381971
 
 The probability of survival conditional on having a first-class ticket,
-a second-class ticket, and a third-class ticket is
-![62\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;62%5C%25 "62\%"),
-![43\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;43%5C%25 "43\%"),
-and
-![26\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;26%5C%25 "26\%"),
-so we can’t assume independence. Mathematically,
+a second-class ticket, and a third-class ticket is 62%, 43%, and 26%, so we can’t assume independence. Mathematically,
 ![\mathrm{P}(S_i \mid C_i) \not=\mathrm{P}(S_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathrm%7BP%7D%28S_i%20%5Cmid%20C_i%29%20%5Cnot%3D%5Cmathrm%7BP%7D%28S_i%29 "\mathrm{P}(S_i \mid C_i) \not=\mathrm{P}(S_i)").
 We might also use
 ![\chi^2](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cchi%5E2 "\chi^2")
@@ -201,8 +181,7 @@ chisq.test(TitanicSurvival$survived,TitanicSurvival$passengerClass)
     data:  TitanicSurvival$survived and TitanicSurvival$passengerClass
     X-squared = 127.86, df = 2, p-value < 2.2e-16
 
-The p-value is almost equal to
-![0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;0 "0"),
+The p-value is almost equal to 0,
 implying that the probability of survival and the ticket class are not
 independent, at all levels.
 
