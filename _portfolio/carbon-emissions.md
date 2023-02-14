@@ -1,9 +1,3 @@
----
-title: "Carbon dioxide emissions"
-excerpt: "Short description"
-collection: portfolio
----
-
 Change of CO<sub>2</sub> emissions per capita across countries in the
 long run
 ================
@@ -236,10 +230,2171 @@ emission2<-filter(emission,country%in%regions)
 emission<-emission[!(emission$country %in% emission2$country),]
 
 #let's create a table to show our data.
-datatable(emission, colnames = c("country","percentage change of emissions per capita \n (1960-2016)","Average of emissions per capita (in metric tons) \n (1960-2016)","coefficent of variation"))
+knitr::kable(emission, format = "html", col.names = c("country","percentage change of emissions per capita \n (1960-2016)","Average of emissions per capita (in metric tons) \n (1960-2016)","coefficent of variation"))
 ```
 
-![](carbon-emissions_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+country
+</th>
+<th style="text-align:right;">
+percentage change of emissions per capita (1960-2016)
+</th>
+<th style="text-align:right;">
+Average of emissions per capita (in metric tons) (1960-2016)
+</th>
+<th style="text-align:right;">
+coefficent of variation
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Aruba
+</td>
+<td style="text-align:right;">
+-5.5368
+</td>
+<td style="text-align:right;">
+104.7306
+</td>
+<td style="text-align:right;">
+0.9957
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Afghanistan
+</td>
+<td style="text-align:right;">
+3.0304
+</td>
+<td style="text-align:right;">
+0.1480
+</td>
+<td style="text-align:right;">
+0.6027
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Angola
+</td>
+<td style="text-align:right;">
+4.5262
+</td>
+<td style="text-align:right;">
+0.6517
+</td>
+<td style="text-align:right;">
+0.5584
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Albania
+</td>
+<td style="text-align:right;">
+0.4043
+</td>
+<td style="text-align:right;">
+1.6517
+</td>
+<td style="text-align:right;">
+0.3928
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+United Arab Emirates
+</td>
+<td style="text-align:right;">
+9.7721
+</td>
+<td style="text-align:right;">
+31.0151
+</td>
+<td style="text-align:right;">
+0.6809
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Argentina
+</td>
+<td style="text-align:right;">
+1.1886
+</td>
+<td style="text-align:right;">
+3.6885
+</td>
+<td style="text-align:right;">
+0.1667
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Antigua and Barbuda
+</td>
+<td style="text-align:right;">
+3.9396
+</td>
+<td style="text-align:right;">
+5.2642
+</td>
+<td style="text-align:right;">
+0.5957
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Australia
+</td>
+<td style="text-align:right;">
+1.0656
+</td>
+<td style="text-align:right;">
+14.5646
+</td>
+<td style="text-align:right;">
+0.1859
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Austria
+</td>
+<td style="text-align:right;">
+0.8521
+</td>
+<td style="text-align:right;">
+7.1936
+</td>
+<td style="text-align:right;">
+0.1503
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Belgium
+</td>
+<td style="text-align:right;">
+-0.2688
+</td>
+<td style="text-align:right;">
+11.1275
+</td>
+<td style="text-align:right;">
+0.1328
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Benin
+</td>
+<td style="text-align:right;">
+3.9968
+</td>
+<td style="text-align:right;">
+0.2176
+</td>
+<td style="text-align:right;">
+0.7736
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Burkina Faso
+</td>
+<td style="text-align:right;">
+5.5060
+</td>
+<td style="text-align:right;">
+0.0714
+</td>
+<td style="text-align:right;">
+0.6308
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bangladesh
+</td>
+<td style="text-align:right;">
+1.0641
+</td>
+<td style="text-align:right;">
+0.2413
+</td>
+<td style="text-align:right;">
+0.5605
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bulgaria
+</td>
+<td style="text-align:right;">
+1.3031
+</td>
+<td style="text-align:right;">
+7.0697
+</td>
+<td style="text-align:right;">
+0.2531
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bahrain
+</td>
+<td style="text-align:right;">
+3.3329
+</td>
+<td style="text-align:right;">
+20.4557
+</td>
+<td style="text-align:right;">
+0.3546
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bahamas, The
+</td>
+<td style="text-align:right;">
+0.4139
+</td>
+<td style="text-align:right;">
+12.6245
+</td>
+<td style="text-align:right;">
+0.9974
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Belize
+</td>
+<td style="text-align:right;">
+2.1146
+</td>
+<td style="text-align:right;">
+1.3571
+</td>
+<td style="text-align:right;">
+0.2748
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bermuda
+</td>
+<td style="text-align:right;">
+1.7700
+</td>
+<td style="text-align:right;">
+7.5946
+</td>
+<td style="text-align:right;">
+0.3053
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bolivia
+</td>
+<td style="text-align:right;">
+3.5695
+</td>
+<td style="text-align:right;">
+0.9748
+</td>
+<td style="text-align:right;">
+0.4629
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brazil
+</td>
+<td style="text-align:right;">
+2.2362
+</td>
+<td style="text-align:right;">
+1.5104
+</td>
+<td style="text-align:right;">
+0.3317
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Barbados
+</td>
+<td style="text-align:right;">
+3.2464
+</td>
+<td style="text-align:right;">
+3.2366
+</td>
+<td style="text-align:right;">
+0.4399
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brunei Darussalam
+</td>
+<td style="text-align:right;">
+2.7099
+</td>
+<td style="text-align:right;">
+20.9130
+</td>
+<td style="text-align:right;">
+0.7876
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Central African Republic
+</td>
+<td style="text-align:right;">
+0.1976
+</td>
+<td style="text-align:right;">
+0.0677
+</td>
+<td style="text-align:right;">
+0.2268
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Canada
+</td>
+<td style="text-align:right;">
+0.6039
+</td>
+<td style="text-align:right;">
+15.7752
+</td>
+<td style="text-align:right;">
+0.1164
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Switzerland
+</td>
+<td style="text-align:right;">
+0.2084
+</td>
+<td style="text-align:right;">
+5.6816
+</td>
+<td style="text-align:right;">
+0.1387
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Chile
+</td>
+<td style="text-align:right;">
+1.8823
+</td>
+<td style="text-align:right;">
+2.8843
+</td>
+<td style="text-align:right;">
+0.3427
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+China
+</td>
+<td style="text-align:right;">
+3.2912
+</td>
+<td style="text-align:right;">
+2.7341
+</td>
+<td style="text-align:right;">
+0.7767
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cote d’Ivoire
+</td>
+<td style="text-align:right;">
+2.0286
+</td>
+<td style="text-align:right;">
+0.4556
+</td>
+<td style="text-align:right;">
+0.3550
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cameroon
+</td>
+<td style="text-align:right;">
+3.4302
+</td>
+<td style="text-align:right;">
+0.2387
+</td>
+<td style="text-align:right;">
+0.7174
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Congo, Dem. Rep. 
+</td>
+<td style="text-align:right;">
+-3.1304
+</td>
+<td style="text-align:right;">
+0.0931
+</td>
+<td style="text-align:right;">
+0.5691
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Congo, Rep. 
+</td>
+<td style="text-align:right;">
+1.9808
+</td>
+<td style="text-align:right;">
+0.4640
+</td>
+<td style="text-align:right;">
+0.4634
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Colombia
+</td>
+<td style="text-align:right;">
+1.2335
+</td>
+<td style="text-align:right;">
+1.5424
+</td>
+<td style="text-align:right;">
+0.1478
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Comoros
+</td>
+<td style="text-align:right;">
+2.6827
+</td>
+<td style="text-align:right;">
+0.1476
+</td>
+<td style="text-align:right;">
+0.3603
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cabo Verde
+</td>
+<td style="text-align:right;">
+4.0765
+</td>
+<td style="text-align:right;">
+0.4463
+</td>
+<td style="text-align:right;">
+0.7892
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Costa Rica
+</td>
+<td style="text-align:right;">
+2.6956
+</td>
+<td style="text-align:right;">
+1.1229
+</td>
+<td style="text-align:right;">
+0.3784
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cuba
+</td>
+<td style="text-align:right;">
+0.4705
+</td>
+<td style="text-align:right;">
+2.5115
+</td>
+<td style="text-align:right;">
+0.2044
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cayman Islands
+</td>
+<td style="text-align:right;">
+3.3246
+</td>
+<td style="text-align:right;">
+7.8378
+</td>
+<td style="text-align:right;">
+0.4392
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cyprus
+</td>
+<td style="text-align:right;">
+2.3419
+</td>
+<td style="text-align:right;">
+5.0497
+</td>
+<td style="text-align:right;">
+0.3909
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Djibouti
+</td>
+<td style="text-align:right;">
+0.5807
+</td>
+<td style="text-align:right;">
+0.6923
+</td>
+<td style="text-align:right;">
+0.2644
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dominica
+</td>
+<td style="text-align:right;">
+4.7911
+</td>
+<td style="text-align:right;">
+1.0261
+</td>
+<td style="text-align:right;">
+0.7757
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Denmark
+</td>
+<td style="text-align:right;">
+-0.2828
+</td>
+<td style="text-align:right;">
+9.9830
+</td>
+<td style="text-align:right;">
+0.1931
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dominican Republic
+</td>
+<td style="text-align:right;">
+3.7084
+</td>
+<td style="text-align:right;">
+1.4625
+</td>
+<td style="text-align:right;">
+0.4745
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Algeria
+</td>
+<td style="text-align:right;">
+3.4383
+</td>
+<td style="text-align:right;">
+2.5084
+</td>
+<td style="text-align:right;">
+0.4244
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ecuador
+</td>
+<td style="text-align:right;">
+3.3786
+</td>
+<td style="text-align:right;">
+1.5853
+</td>
+<td style="text-align:right;">
+0.4666
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Egypt, Arab Rep. 
+</td>
+<td style="text-align:right;">
+2.5915
+</td>
+<td style="text-align:right;">
+1.4477
+</td>
+<td style="text-align:right;">
+0.4560
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Spain
+</td>
+<td style="text-align:right;">
+2.1367
+</td>
+<td style="text-align:right;">
+5.2077
+</td>
+<td style="text-align:right;">
+0.3283
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ethiopia
+</td>
+<td style="text-align:right;">
+4.0080
+</td>
+<td style="text-align:right;">
+0.0574
+</td>
+<td style="text-align:right;">
+0.4595
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Finland
+</td>
+<td style="text-align:right;">
+1.6115
+</td>
+<td style="text-align:right;">
+9.5432
+</td>
+<td style="text-align:right;">
+0.2471
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Fiji
+</td>
+<td style="text-align:right;">
+2.8209
+</td>
+<td style="text-align:right;">
+1.0979
+</td>
+<td style="text-align:right;">
+0.3544
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Faroe Islands
+</td>
+<td style="text-align:right;">
+3.7182
+</td>
+<td style="text-align:right;">
+10.4409
+</td>
+<td style="text-align:right;">
+0.3802
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gabon
+</td>
+<td style="text-align:right;">
+4.2078
+</td>
+<td style="text-align:right;">
+4.4558
+</td>
+<td style="text-align:right;">
+0.6093
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+United Kingdom
+</td>
+<td style="text-align:right;">
+-1.1675
+</td>
+<td style="text-align:right;">
+9.7055
+</td>
+<td style="text-align:right;">
+0.1516
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ghana
+</td>
+<td style="text-align:right;">
+1.7584
+</td>
+<td style="text-align:right;">
+0.3101
+</td>
+<td style="text-align:right;">
+0.3348
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gibraltar
+</td>
+<td style="text-align:right;">
+4.0501
+</td>
+<td style="text-align:right;">
+6.6509
+</td>
+<td style="text-align:right;">
+0.7819
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Guinea
+</td>
+<td style="text-align:right;">
+1.3942
+</td>
+<td style="text-align:right;">
+0.1939
+</td>
+<td style="text-align:right;">
+0.1322
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Gambia, The
+</td>
+<td style="text-align:right;">
+2.8882
+</td>
+<td style="text-align:right;">
+0.1829
+</td>
+<td style="text-align:right;">
+0.3307
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Guinea-Bissau
+</td>
+<td style="text-align:right;">
+3.1013
+</td>
+<td style="text-align:right;">
+0.1454
+</td>
+<td style="text-align:right;">
+0.3002
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Equatorial Guinea
+</td>
+<td style="text-align:right;">
+7.3830
+</td>
+<td style="text-align:right;">
+2.4384
+</td>
+<td style="text-align:right;">
+1.5230
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Greece
+</td>
+<td style="text-align:right;">
+2.9637
+</td>
+<td style="text-align:right;">
+5.7733
+</td>
+<td style="text-align:right;">
+0.4145
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Grenada
+</td>
+<td style="text-align:right;">
+4.1832
+</td>
+<td style="text-align:right;">
+1.1918
+</td>
+<td style="text-align:right;">
+0.6775
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Greenland
+</td>
+<td style="text-align:right;">
+0.4944
+</td>
+<td style="text-align:right;">
+8.8976
+</td>
+<td style="text-align:right;">
+0.2525
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Guatemala
+</td>
+<td style="text-align:right;">
+2.1281
+</td>
+<td style="text-align:right;">
+0.6261
+</td>
+<td style="text-align:right;">
+0.3285
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Guyana
+</td>
+<td style="text-align:right;">
+1.7739
+</td>
+<td style="text-align:right;">
+1.9819
+</td>
+<td style="text-align:right;">
+0.2245
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hong Kong SAR, China
+</td>
+<td style="text-align:right;">
+3.3089
+</td>
+<td style="text-align:right;">
+4.2088
+</td>
+<td style="text-align:right;">
+0.4389
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Honduras
+</td>
+<td style="text-align:right;">
+2.2637
+</td>
+<td style="text-align:right;">
+0.6510
+</td>
+<td style="text-align:right;">
+0.3910
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Haiti
+</td>
+<td style="text-align:right;">
+2.3702
+</td>
+<td style="text-align:right;">
+0.1444
+</td>
+<td style="text-align:right;">
+0.4380
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hungary
+</td>
+<td style="text-align:right;">
+0.0371
+</td>
+<td style="text-align:right;">
+6.2494
+</td>
+<td style="text-align:right;">
+0.1908
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Indonesia
+</td>
+<td style="text-align:right;">
+3.9661
+</td>
+<td style="text-align:right;">
+0.9430
+</td>
+<td style="text-align:right;">
+0.6143
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+India
+</td>
+<td style="text-align:right;">
+3.4802
+</td>
+<td style="text-align:right;">
+0.7597
+</td>
+<td style="text-align:right;">
+0.5755
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ireland
+</td>
+<td style="text-align:right;">
+1.2511
+</td>
+<td style="text-align:right;">
+7.9648
+</td>
+<td style="text-align:right;">
+0.2305
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Iran, Islamic Rep. 
+</td>
+<td style="text-align:right;">
+2.8682
+</td>
+<td style="text-align:right;">
+4.6137
+</td>
+<td style="text-align:right;">
+0.4323
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Iraq
+</td>
+<td style="text-align:right;">
+2.7540
+</td>
+<td style="text-align:right;">
+3.1510
+</td>
+<td style="text-align:right;">
+0.3120
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Iceland
+</td>
+<td style="text-align:right;">
+-0.2073
+</td>
+<td style="text-align:right;">
+7.2322
+</td>
+<td style="text-align:right;">
+0.0998
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Israel
+</td>
+<td style="text-align:right;">
+1.6439
+</td>
+<td style="text-align:right;">
+6.9423
+</td>
+<td style="text-align:right;">
+0.2820
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jamaica
+</td>
+<td style="text-align:right;">
+2.0610
+</td>
+<td style="text-align:right;">
+2.9976
+</td>
+<td style="text-align:right;">
+0.2853
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jordan
+</td>
+<td style="text-align:right;">
+2.1522
+</td>
+<td style="text-align:right;">
+2.3331
+</td>
+<td style="text-align:right;">
+0.3937
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Japan
+</td>
+<td style="text-align:right;">
+2.2904
+</td>
+<td style="text-align:right;">
+7.9160
+</td>
+<td style="text-align:right;">
+0.2535
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kenya
+</td>
+<td style="text-align:right;">
+0.3576
+</td>
+<td style="text-align:right;">
+0.2842
+</td>
+<td style="text-align:right;">
+0.1762
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cambodia
+</td>
+<td style="text-align:right;">
+4.9967
+</td>
+<td style="text-align:right;">
+0.1447
+</td>
+<td style="text-align:right;">
+0.9601
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+St. Kitts and Nevis
+</td>
+<td style="text-align:right;">
+5.6303
+</td>
+<td style="text-align:right;">
+2.2936
+</td>
+<td style="text-align:right;">
+0.7181
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Korea, Rep. 
+</td>
+<td style="text-align:right;">
+5.8497
+</td>
+<td style="text-align:right;">
+5.8387
+</td>
+<td style="text-align:right;">
+0.6661
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kuwait
+</td>
+<td style="text-align:right;">
+-0.2684
+</td>
+<td style="text-align:right;">
+28.1521
+</td>
+<td style="text-align:right;">
+0.4530
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lao PDR
+</td>
+<td style="text-align:right;">
+7.8320
+</td>
+<td style="text-align:right;">
+0.2363
+</td>
+<td style="text-align:right;">
+1.6330
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lebanon
+</td>
+<td style="text-align:right;">
+1.7092
+</td>
+<td style="text-align:right;">
+2.9562
+</td>
+<td style="text-align:right;">
+0.3086
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Liberia
+</td>
+<td style="text-align:right;">
+1.2889
+</td>
+<td style="text-align:right;">
+0.4251
+</td>
+<td style="text-align:right;">
+0.7731
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Libya
+</td>
+<td style="text-align:right;">
+5.1079
+</td>
+<td style="text-align:right;">
+7.7510
+</td>
+<td style="text-align:right;">
+0.4346
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+St. Lucia
+</td>
+<td style="text-align:right;">
+4.8355
+</td>
+<td style="text-align:right;">
+1.3324
+</td>
+<td style="text-align:right;">
+0.5781
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sri Lanka
+</td>
+<td style="text-align:right;">
+2.8471
+</td>
+<td style="text-align:right;">
+0.3959
+</td>
+<td style="text-align:right;">
+0.5561
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Luxembourg
+</td>
+<td style="text-align:right;">
+-1.5332
+</td>
+<td style="text-align:right;">
+27.2603
+</td>
+<td style="text-align:right;">
+0.2720
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Macao SAR, China
+</td>
+<td style="text-align:right;">
+4.3800
+</td>
+<td style="text-align:right;">
+2.2823
+</td>
+<td style="text-align:right;">
+0.5034
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Morocco
+</td>
+<td style="text-align:right;">
+3.2223
+</td>
+<td style="text-align:right;">
+0.9646
+</td>
+<td style="text-align:right;">
+0.4955
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Madagascar
+</td>
+<td style="text-align:right;">
+1.2467
+</td>
+<td style="text-align:right;">
+0.1132
+</td>
+<td style="text-align:right;">
+0.2823
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mexico
+</td>
+<td style="text-align:right;">
+1.5453
+</td>
+<td style="text-align:right;">
+3.4244
+</td>
+<td style="text-align:right;">
+0.2733
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mali
+</td>
+<td style="text-align:right;">
+3.7117
+</td>
+<td style="text-align:right;">
+0.0671
+</td>
+<td style="text-align:right;">
+0.5997
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Malta
+</td>
+<td style="text-align:right;">
+1.8700
+</td>
+<td style="text-align:right;">
+4.2710
+</td>
+<td style="text-align:right;">
+0.4617
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Myanmar
+</td>
+<td style="text-align:right;">
+2.4186
+</td>
+<td style="text-align:right;">
+0.1793
+</td>
+<td style="text-align:right;">
+0.4061
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mongolia
+</td>
+<td style="text-align:right;">
+3.2899
+</td>
+<td style="text-align:right;">
+4.1000
+</td>
+<td style="text-align:right;">
+0.6209
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mozambique
+</td>
+<td style="text-align:right;">
+0.1506
+</td>
+<td style="text-align:right;">
+0.1800
+</td>
+<td style="text-align:right;">
+0.5763
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mauritania
+</td>
+<td style="text-align:right;">
+4.9865
+</td>
+<td style="text-align:right;">
+0.4846
+</td>
+<td style="text-align:right;">
+0.6599
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mauritius
+</td>
+<td style="text-align:right;">
+4.6330
+</td>
+<td style="text-align:right;">
+1.4815
+</td>
+<td style="text-align:right;">
+0.7057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Malaysia
+</td>
+<td style="text-align:right;">
+5.3481
+</td>
+<td style="text-align:right;">
+3.7809
+</td>
+<td style="text-align:right;">
+0.6885
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Caledonia
+</td>
+<td style="text-align:right;">
+1.0210
+</td>
+<td style="text-align:right;">
+12.5874
+</td>
+<td style="text-align:right;">
+0.3056
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Niger
+</td>
+<td style="text-align:right;">
+4.4097
+</td>
+<td style="text-align:right;">
+0.0711
+</td>
+<td style="text-align:right;">
+0.4863
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nigeria
+</td>
+<td style="text-align:right;">
+3.9122
+</td>
+<td style="text-align:right;">
+0.5706
+</td>
+<td style="text-align:right;">
+0.4541
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nicaragua
+</td>
+<td style="text-align:right;">
+1.9556
+</td>
+<td style="text-align:right;">
+0.6396
+</td>
+<td style="text-align:right;">
+0.2430
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Netherlands
+</td>
+<td style="text-align:right;">
+0.8054
+</td>
+<td style="text-align:right;">
+10.4779
+</td>
+<td style="text-align:right;">
+0.1408
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Norway
+</td>
+<td style="text-align:right;">
+1.3696
+</td>
+<td style="text-align:right;">
+8.1035
+</td>
+<td style="text-align:right;">
+0.2490
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nepal
+</td>
+<td style="text-align:right;">
+6.8947
+</td>
+<td style="text-align:right;">
+0.0811
+</td>
+<td style="text-align:right;">
+0.9419
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+New Zealand
+</td>
+<td style="text-align:right;">
+0.7329
+</td>
+<td style="text-align:right;">
+6.7170
+</td>
+<td style="text-align:right;">
+0.1875
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pakistan
+</td>
+<td style="text-align:right;">
+2.0641
+</td>
+<td style="text-align:right;">
+0.5982
+</td>
+<td style="text-align:right;">
+0.3733
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Panama
+</td>
+<td style="text-align:right;">
+1.9902
+</td>
+<td style="text-align:right;">
+1.7285
+</td>
+<td style="text-align:right;">
+0.3128
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Peru
+</td>
+<td style="text-align:right;">
+1.5036
+</td>
+<td style="text-align:right;">
+1.2275
+</td>
+<td style="text-align:right;">
+0.2305
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Philippines
+</td>
+<td style="text-align:right;">
+2.3726
+</td>
+<td style="text-align:right;">
+0.7503
+</td>
+<td style="text-align:right;">
+0.2540
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Palau
+</td>
+<td style="text-align:right;">
+3.8750
+</td>
+<td style="text-align:right;">
+11.0785
+</td>
+<td style="text-align:right;">
+0.2685
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Papua New Guinea
+</td>
+<td style="text-align:right;">
+4.4477
+</td>
+<td style="text-align:right;">
+0.4751
+</td>
+<td style="text-align:right;">
+0.4368
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poland
+</td>
+<td style="text-align:right;">
+0.2783
+</td>
+<td style="text-align:right;">
+9.3094
+</td>
+<td style="text-align:right;">
+0.1873
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Korea, Dem. People’s Rep. 
+</td>
+<td style="text-align:right;">
+-1.1072
+</td>
+<td style="text-align:right;">
+4.4920
+</td>
+<td style="text-align:right;">
+0.5255
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Portugal
+</td>
+<td style="text-align:right;">
+2.9462
+</td>
+<td style="text-align:right;">
+3.6178
+</td>
+<td style="text-align:right;">
+0.4682
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Paraguay
+</td>
+<td style="text-align:right;">
+3.4923
+</td>
+<td style="text-align:right;">
+0.5356
+</td>
+<td style="text-align:right;">
+0.4522
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+French Polynesia
+</td>
+<td style="text-align:right;">
+3.2425
+</td>
+<td style="text-align:right;">
+2.1754
+</td>
+<td style="text-align:right;">
+0.3394
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Qatar
+</td>
+<td style="text-align:right;">
+4.2834
+</td>
+<td style="text-align:right;">
+53.6178
+</td>
+<td style="text-align:right;">
+0.3925
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Romania
+</td>
+<td style="text-align:right;">
+0.3418
+</td>
+<td style="text-align:right;">
+5.7855
+</td>
+<td style="text-align:right;">
+0.3468
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Russian Federation
+</td>
+<td style="text-align:right;">
+-0.0123
+</td>
+<td style="text-align:right;">
+16.7677
+</td>
+<td style="text-align:right;">
+0.3554
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rwanda
+</td>
+<td style="text-align:right;">
+1.7467
+</td>
+<td style="text-align:right;">
+0.0610
+</td>
+<td style="text-align:right;">
+0.4857
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saudi Arabia
+</td>
+<td style="text-align:right;">
+6.0276
+</td>
+<td style="text-align:right;">
+12.6174
+</td>
+<td style="text-align:right;">
+0.4304
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Senegal
+</td>
+<td style="text-align:right;">
+1.8644
+</td>
+<td style="text-align:right;">
+0.4258
+</td>
+<td style="text-align:right;">
+0.3271
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Singapore
+</td>
+<td style="text-align:right;">
+3.7619
+</td>
+<td style="text-align:right;">
+9.6861
+</td>
+<td style="text-align:right;">
+0.4664
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Solomon Islands
+</td>
+<td style="text-align:right;">
+1.9302
+</td>
+<td style="text-align:right;">
+0.3566
+</td>
+<td style="text-align:right;">
+0.3393
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sierra Leone
+</td>
+<td style="text-align:right;">
+-1.2901
+</td>
+<td style="text-align:right;">
+0.1521
+</td>
+<td style="text-align:right;">
+0.4071
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+El Salvador
+</td>
+<td style="text-align:right;">
+2.9284
+</td>
+<td style="text-align:right;">
+0.6683
+</td>
+<td style="text-align:right;">
+0.4617
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Somalia
+</td>
+<td style="text-align:right;">
+0.7106
+</td>
+<td style="text-align:right;">
+0.0754
+</td>
+<td style="text-align:right;">
+0.4613
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sao Tome and Principe
+</td>
+<td style="text-align:right;">
+2.2521
+</td>
+<td style="text-align:right;">
+0.3712
+</td>
+<td style="text-align:right;">
+0.3869
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Suriname
+</td>
+<td style="text-align:right;">
+1.2875
+</td>
+<td style="text-align:right;">
+4.1732
+</td>
+<td style="text-align:right;">
+0.2841
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sweden
+</td>
+<td style="text-align:right;">
+-0.7318
+</td>
+<td style="text-align:right;">
+7.1811
+</td>
+<td style="text-align:right;">
+0.2770
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eswatini
+</td>
+<td style="text-align:right;">
+4.3015
+</td>
+<td style="text-align:right;">
+0.8260
+</td>
+<td style="text-align:right;">
+0.3758
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Syrian Arab Republic
+</td>
+<td style="text-align:right;">
+1.5326
+</td>
+<td style="text-align:right;">
+2.2426
+</td>
+<td style="text-align:right;">
+0.4145
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Chad
+</td>
+<td style="text-align:right;">
+2.4157
+</td>
+<td style="text-align:right;">
+0.0510
+</td>
+<td style="text-align:right;">
+0.3722
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Togo
+</td>
+<td style="text-align:right;">
+4.1146
+</td>
+<td style="text-align:right;">
+0.2191
+</td>
+<td style="text-align:right;">
+0.4703
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Thailand
+</td>
+<td style="text-align:right;">
+6.2834
+</td>
+<td style="text-align:right;">
+1.8140
+</td>
+<td style="text-align:right;">
+0.7679
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tonga
+</td>
+<td style="text-align:right;">
+3.5631
+</td>
+<td style="text-align:right;">
+0.6759
+</td>
+<td style="text-align:right;">
+0.5748
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Trinidad and Tobago
+</td>
+<td style="text-align:right;">
+4.2812
+</td>
+<td style="text-align:right;">
+17.1814
+</td>
+<td style="text-align:right;">
+0.5816
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tunisia
+</td>
+<td style="text-align:right;">
+3.3723
+</td>
+<td style="text-align:right;">
+1.5716
+</td>
+<td style="text-align:right;">
+0.4326
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Turkey
+</td>
+<td style="text-align:right;">
+3.6945
+</td>
+<td style="text-align:right;">
+2.4980
+</td>
+<td style="text-align:right;">
+0.4709
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Tanzania
+</td>
+<td style="text-align:right;">
+1.8145
+</td>
+<td style="text-align:right;">
+0.1244
+</td>
+<td style="text-align:right;">
+0.3628
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Uganda
+</td>
+<td style="text-align:right;">
+1.4977
+</td>
+<td style="text-align:right;">
+0.0786
+</td>
+<td style="text-align:right;">
+0.4399
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Uruguay
+</td>
+<td style="text-align:right;">
+0.2672
+</td>
+<td style="text-align:right;">
+1.7782
+</td>
+<td style="text-align:right;">
+0.1969
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+United States
+</td>
+<td style="text-align:right;">
+-0.0564
+</td>
+<td style="text-align:right;">
+19.0121
+</td>
+<td style="text-align:right;">
+0.0924
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+St. Vincent and the Grenadines
+</td>
+<td style="text-align:right;">
+4.9290
+</td>
+<td style="text-align:right;">
+0.9817
+</td>
+<td style="text-align:right;">
+0.7709
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Venezuela, RB
+</td>
+<td style="text-align:right;">
+-0.4319
+</td>
+<td style="text-align:right;">
+6.0106
+</td>
+<td style="text-align:right;">
+0.1112
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vietnam
+</td>
+<td style="text-align:right;">
+4.4265
+</td>
+<td style="text-align:right;">
+0.6517
+</td>
+<td style="text-align:right;">
+0.8192
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Samoa
+</td>
+<td style="text-align:right;">
+4.0731
+</td>
+<td style="text-align:right;">
+0.6365
+</td>
+<td style="text-align:right;">
+0.4885
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yemen, Rep. 
+</td>
+<td style="text-align:right;">
+6.5750
+</td>
+<td style="text-align:right;">
+0.4488
+</td>
+<td style="text-align:right;">
+0.8496
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+South Africa
+</td>
+<td style="text-align:right;">
+0.7035
+</td>
+<td style="text-align:right;">
+8.1874
+</td>
+<td style="text-align:right;">
+0.1465
+</td>
+</tr>
+</tbody>
+</table>
 
 We can see which country has the highest and the lowest emission change
 in the long run.
@@ -276,7 +2431,7 @@ epdfPlot(emission$change,xlab=expression('Change of CO'[2] ~ 'emissions per capi
 abline(v=mean(emission$change),col="darkgray")
 ```
 
-![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-5-1.png?raw=true)<!-- -->
+![](carbon-emissions_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 The dark gray vertical line represents the mean in our data, as you
 might expected from the code.
@@ -286,7 +2441,7 @@ might expected from the code.
 ecdfPlot(emission$change, xlab =expression('Order Statistics for the change rate of CO'[2]~'emissions per capita'),main=expression('Empirical CDF of the percentage change of CO'[2]~ 'emissions per capita in the long run'),cex.main=0.95)
 ```
 
-![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-6-1.png?raw=true)<!-- -->
+![](carbon-emissions_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 We can see that the probability that the emission change rate in the
 long run is less than or equal to zero is almost
@@ -306,7 +2461,7 @@ boxplot(emission$change,horizontal=T,xlab=expression('Change of CO'[2] ~ 'emissi
 abline(v=0)
 ```
 
-![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-7-1.png?raw=true)<!-- -->
+![](carbon-emissions_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 It doesn’t seem close to zero but it might not be significant, so let’s
 test if the change in the long run across countries is significant from
