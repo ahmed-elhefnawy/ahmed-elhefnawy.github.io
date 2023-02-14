@@ -2431,7 +2431,7 @@ epdfPlot(emission$change,xlab=expression('Change of CO'[2] ~ 'emissions per capi
 abline(v=mean(emission$change),col="darkgray")
 ```
 
-![](carbon-emissions_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-5-1.png?raw=true)<!-- -->
 
 The dark gray vertical line represents the mean in our data, as you
 might expected from the code.
@@ -2441,7 +2441,7 @@ might expected from the code.
 ecdfPlot(emission$change, xlab =expression('Order Statistics for the change rate of CO'[2]~'emissions per capita'),main=expression('Empirical CDF of the percentage change of CO'[2]~ 'emissions per capita in the long run'),cex.main=0.95)
 ```
 
-![](carbon-emissions_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-6-1.png?raw=true)<!-- -->
 
 We can see that the probability that the emission change rate in the
 long run is less than or equal to zero is almost
@@ -2461,7 +2461,7 @@ boxplot(emission$change,horizontal=T,xlab=expression('Change of CO'[2] ~ 'emissi
 abline(v=0)
 ```
 
-![](carbon-emissions_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-7-1.png?raw=true)<!-- -->
 
 It doesn’t seem close to zero but it might not be significant, so let’s
 test if the change in the long run across countries is significant from
