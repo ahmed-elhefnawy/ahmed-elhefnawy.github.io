@@ -1,6 +1,6 @@
 ---
-title: "Change of CO<sub>2</sub> emissions per capita across countries in the long run"
-excerpt: "Short description"
+title: "Change of CO<sub>2</sub> emissions per capita"
+excerpt: "Long run estimation across countries"
 collection: portfolio
 ---
   
@@ -2445,8 +2445,7 @@ ecdfPlot(emission$change, xlab =expression('Order Statistics for the change rate
 ![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-6-1.png?raw=true)<!-- -->
 
 We can see that the probability that the emission change rate in the
-long run is less than or equal to zero is almost
-![0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;0 "0"),
+long run is less than or equal to zero is almost 0,
 supporting our hypothesis that the change rate is positive.
 Simply, let
 ![X](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;X "X")
@@ -2485,15 +2484,11 @@ t.test(emission$change)
     mean of x 
      2.480876 
 
-The p-value is extremely small almost equal to
-![0](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;0 "0"),
+The p-value is extremely small almost equal to 0,
 thus the change in the long run is significant from zero at all levels.
 In other words, the carbon dioxide emissions per capita, in metric tons,
-across countries over the period
-![1960-2016](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1960-2016 "1960-2016")
-increased significantly by more than
-![2\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2%5C%25 "2\%"),
-on average.
+across countries over the period 1960-2016
+increased significantly by more than 2%, on average.
 
 We can play more with our data, but I’ll leave that to you, which is why
 I inserted the interactive table.
