@@ -259,7 +259,7 @@ world<-world[!is.na(world$value), ]
 ggplot(mapping=aes(x=year,y=value),data=world)+geom_line()+geom_point(aes(color=above_avg))+scale_x_continuous(breaks=seq(1960,2016,by=5))+scale_y_continuous(breaks = seq(2,5,by=0.2))+labs(x="year",y="CO2 emissions (metric tons per capita)")+theme(legend.position = "none",axis.title = element_text(size=10))+geom_hline(yintercept = mean(world$value,na.rm=TRUE))+scale_color_manual(values=c("TRUE"="red","FALSE"="black"))+annotate("text",x=2012,y=mean(world$value,na.rm=TRUE),vjust=2, label="Average emission")
 ```
 
-![](project_r_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-7.png?raw=true)<!-- -->
 
 The emissions varied between
 ![3](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;3 "3")
@@ -302,7 +302,7 @@ head(world)
 ggplot(mapping=aes(x=year,y=annual_change),data=world)+geom_line()+geom_point()+scale_x_continuous(breaks=seq(1960,2016,by=5))+scale_y_continuous(breaks = seq(-7,8,by=2))+labs(x="year",y="Annual Percentage Change of CO2 emissions (metric tons per capita)")+theme(legend.position = "none",axis.title = element_text(size=8))
 ```
 
-![](project_r_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-8.png?raw=true)<!-- -->
 
 We can see that the highest change was in
 ![1970](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1970 "1970")
@@ -534,7 +534,7 @@ summary(forecast(ets(world_ts)))
 plot(forecast(ets(world_ts)))
 ```
 
-![](project_r_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-14-1.png?raw=true)<!-- -->
 
   
 
