@@ -390,9 +390,7 @@ is Bayesian Information Criteria. For more on
 ![AIC](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;AIC "AIC")
 and
 ![BIC](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;BIC "BIC"),
-see: (Claeskens and Hjort,
-![2008](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2008 "2008"),
-pp. ![22](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;22 "22")-![98](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;98 "98")).
+see: (Claeskens and Hjort,2008, pp. 22-98).
 
 ``` r
 #let's see the accuracy of our model.
