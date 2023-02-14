@@ -1,6 +1,8 @@
-Simple forecast of CO<sub>2</sub> emissions
-================
-
+---
+title: "Simple forecast of CO<sub>2</sub> emissions"
+excerpt: "Short description"
+collection: portfolio
+---
   
 
 Today I wanted to look into how CO<sub>2</sub> emissions changed over
