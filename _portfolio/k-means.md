@@ -1,5 +1,9 @@
-k-means
-================
+---
+title: "k-means"
+excerpt: "Application of k-means using `cars` dataset"
+collection: portfolio
+---
+
 
 ``` r
 #read and assign the data. I made sure that the data file is in the same working directory as the working directory in R.
@@ -138,14 +142,14 @@ library(factoextra)
 
     ## Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-4-1.png?raw=true)<!-- -->
 
 ``` r
 #first we specify the data, then I specify it's kmeans for clustering, then the maximum number of clusters (k.max), then the method that should be used, and here: "wss" is for total within sum of squares.
 fviz_nbclust(dt_cars[,c("HP","EngineSize","Length")], kmeans, k.max=15,method = "wss")
 ```
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-4-2.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -158,7 +162,7 @@ for(i in c(1,10,100)){
 }
 ```
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-5-1.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-5-2.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-5-3.png?raw=true)<!-- -->
 
 The three plots, almost, look exactly the same.
 
@@ -175,7 +179,7 @@ library(NbClust)
 NbClust(dt_cars[,c("HP","EngineSize","Length")],method="kmeans")
 ```
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-6-1.png?raw=true)<!-- -->
 
     ## *** : The Hubert index is a graphical method of determining the number of clusters.
     ##                 In the plot of Hubert index, we seek a significant knee that corresponds to a 
@@ -183,7 +187,7 @@ NbClust(dt_cars[,c("HP","EngineSize","Length")],method="kmeans")
     ##                 index second differences plot. 
     ## 
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-6-2.png?raw=true)<!-- -->
 
     ## *** : The D index is a graphical method of determining the number of clusters. 
     ##                 In the plot of D index, we seek a significant knee (the significant peak in Dindex
@@ -340,7 +344,7 @@ dt_cars[,"HP_st":=((HP-mean(HP))/sd(HP))][,"EngineSize_st":=((EngineSize-mean(En
 NbClust(dt_cars[,c("HP_st","EngineSize_st","Length_st")],method="kmeans")
 ```
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-7-1.png?raw=true)<!-- -->
 
     ## *** : The Hubert index is a graphical method of determining the number of clusters.
     ##                 In the plot of Hubert index, we seek a significant knee that corresponds to a 
@@ -348,7 +352,7 @@ NbClust(dt_cars[,c("HP_st","EngineSize_st","Length_st")],method="kmeans")
     ##                 index second differences plot. 
     ## 
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-7-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-7-2.png?raw=true)<!-- -->
 
     ## *** : The D index is a graphical method of determining the number of clusters. 
     ##                 In the plot of D index, we seek a significant knee (the significant peak in Dindex
@@ -484,7 +488,7 @@ hence lower number of clusters.
 fviz_nbclust(dt_cars[,c("HP_st","EngineSize_st","Length_st")], kmeans, k.max=15,method = "wss")
 ```
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-8-1.png?raw=true)<!-- -->
 
 The elbow shape/form can be seen at k=2 as well.
 
@@ -513,7 +517,7 @@ for(i in 1:2) { #1:2 is for the two clusters
   }
 ```
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-1.png?raw=true)<!-- -->
 
 ``` r
 #create a loop within a function, similar to the previous one to plot the iterations of the algorithm.
@@ -551,7 +555,7 @@ repeat {
 }
 ```
 
-![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-3.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-4.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-5.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-6.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-7.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-8.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-9.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-10.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-11.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-12.png)<!-- -->![](Assignment_8-copy_files/figure-gfm/unnamed-chunk-9-13.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-2.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-3.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-4.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-5.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-6.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-7.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-8.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-9.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-10.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-11.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-12.png?raw=true)<!-- -->![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/k-means/unnamed-chunk-9-13.png?raw=true)<!-- -->
 
 After 6 successive E- and M-steps, the algorithm converges to an
 optimum, in which all data points stop changing cluster membership
