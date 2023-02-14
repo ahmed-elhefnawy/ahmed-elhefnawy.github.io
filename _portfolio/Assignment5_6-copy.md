@@ -1,12 +1,8 @@
-Visualization & knn regression
-================
-
-<style>
-body {
-text-align: justify;
-line-height:2
-}
-</style>
+---
+title: "Visualization & knn regression"
+excerpt: "using `cars` dataset"
+collection: portfolio
+---
 
   
 
@@ -61,7 +57,7 @@ $\bullet$ **The weight distribution of all cars:**
 hist(dt_cars$Weight, main = "Distribution of Weight",xlab = "Weight")
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-3-1.png?raw=true)<!-- -->
 
 ``` r
 #create a boxplot for weight, which shows, from left to right, the minimum, the first quartile, the median, the third quartile, the maximum and the outliers, and the width of the box is the interquantile range.
@@ -69,7 +65,7 @@ hist(dt_cars$Weight, main = "Distribution of Weight",xlab = "Weight")
 boxplot(dt_cars$Weight,horizontal = T)
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-3-2.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -80,7 +76,7 @@ $\bullet$ **The weight distribution of all cars by drive type:**
 plot(dt_cars$Drive,dt_cars$Weight,main="Weight distribution of cars by drive type",xlab="Drive",ylab="Weight")
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-4-1.png?raw=true)<!-- -->
 
 ``` r
 #the same as before, but with colors added.
@@ -90,7 +86,7 @@ plot(dt_cars$Drive,dt_cars$Weight,col=factor(dt_cars$Drive),main="Weight distrib
 library(ggplot2)
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-4-2.png?raw=true)<!-- -->
 
 ``` r
 #using ggplot to create a histogram for the distribution of weight by drive type with a unique color for each drive type.
@@ -98,7 +94,7 @@ ggplot(dt_cars,aes(x=Weight,color=Drive))+
   geom_histogram(bins = 40)
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-4-3.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -111,7 +107,7 @@ ggplot(dt_cars,aes(x=Weight,color=Drive))+
   facet_grid(~Drive)
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-5-1.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -124,7 +120,7 @@ ggplot(data = dt_cars, aes(x=Weight, y=Drive, fill = Drive)) +
   scale_colour_brewer(type = "qual", palette = 1) #the "qual" stands for qualitative
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-6-1.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -137,7 +133,7 @@ ggplot(data = dt_cars, aes(x=Weight, y=Drive,vline_color=Drive)) +
   stat_density_ridges(quantile_lines = T,quantiles = 2) #this line will calculate the median of weight for each drive type. First, the quantile lines have to be shown, so it's set to be True, and then the "quantiles" will set the number of quantiles the data should be broken into, and since the median represents the 50th percentile, then the data will be broken into two quantiles. To color each vertical line, I added "vline_color" before, in the aesthetics in ggplot, so that the vertical lines will have different colors based on the drive type.
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-7-1.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -154,7 +150,7 @@ ggplot(data=dt_cars,aes(x=HP,y=log(RetailPrice)))+
   geom_point(data=sports_car, color="red")
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-8-1.png?raw=true)<!-- -->
 
 ``` r
 #the same plot as before, but in facets by drive type.
@@ -164,7 +160,7 @@ ggplot(data=dt_cars,aes(x=HP,y=log(RetailPrice)))+
   facet_grid(~Drive)
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-8-2.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -183,7 +179,7 @@ ggplot(data=dt_timeseries,aes(x=date,y=y_1))+
 
     ## Warning: Removed 6 rows containing missing values (`geom_step()`).
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-9-1.png?raw=true)<!-- -->
 
 ``` r
 #the same plot as before, but for the second time series.
@@ -194,7 +190,7 @@ ggplot(data=dt_timeseries,aes(x=date,y=y_2))+
 
     ## Warning: Removed 6 rows containing missing values (`geom_step()`).
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-9-2.png?raw=true)<!-- -->
 
 ``` r
 #plotting the two time series together in one diagram.
@@ -208,7 +204,7 @@ ggplot()+
     ## Warning: Removed 6 rows containing missing values (`geom_step()`).
     ## Removed 6 rows containing missing values (`geom_step()`).
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-9-3.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-9-3.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -228,7 +224,7 @@ ggplot(dt_cars,aes(x=Weight,y=HP,color=Type,size=Cyl))+
 
     ## Warning: Removed 2 rows containing missing values (`geom_point()`).
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-10-1.png?raw=true)<!-- -->
 
 The target is to see the relationship between weight and horsepower by
 cylinders and type of car. This will be shown by the different colors
@@ -276,16 +272,7 @@ ggplot(dt_cars,aes(x=HP,y=margin,color=Type,size=EngineSize))+
   labs(x="Horse Power")
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
-
-The target is to see the relationship between horsepower and retail
-margin by type of car and engine size. This will be shown by the
-different colors (for car type) and different sizes (for engine size).
-(the action).
-1)  HP: Quantitative (continuous)
-2)  margin: Quantitative (continuous)
-3)  Type: Qualitative (nominal)
-4)  Enginesize: Quantitative (continuous)
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-11-1.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -400,7 +387,7 @@ ggplot(dt_linear,aes(x=x,y=y))+
   geom_smooth(method = "lm",formula = y~1,se=F) #se is for the standard error to be shown, or not, surronding the line.
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-12-1.png?raw=true)<!-- -->
 
 ``` r
 #plot the second model:
@@ -409,7 +396,7 @@ geom_point()+
   geom_smooth(method = "lm",se=F,formula = y~x)
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-12-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-12-2.png?raw=true)<!-- -->
 
 ``` r
 #plot the third model:
@@ -418,7 +405,7 @@ ggplot(dt_linear,aes(x=x,y=y))+
   geom_smooth(method = "lm",formula = y~x+I(x^2))
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-12-3.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-12-3.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -441,7 +428,7 @@ ggplot(dt_linear,aes(x,y))+
   theme(plot.title = element_text(hjust = 0.5)) #to center the plot title.
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-13-1.png?raw=true)<!-- -->
 
 ``` r
 two<-knn.reg(dt_linear,y=dt_linear$y,k=5)
@@ -459,7 +446,7 @@ ggplot(dt_linear,aes(x,y))+
   theme(plot.title = element_text(hjust = 0.5)) #to center the plot title.
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-13-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-13-2.png?raw=true)<!-- -->
 
 ``` r
 three<-knn.reg(dt_linear,y=dt_linear$y,k=20)
@@ -477,7 +464,7 @@ ggplot(dt_linear,aes(x,y))+
   theme(plot.title = element_text(hjust = 0.5)) #to center the plot title.
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-13-3.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-13-3.png?raw=true)<!-- -->
 
 ``` r
 four<-knn.reg(dt_linear,y=dt_linear$y,k=109)
@@ -495,4 +482,4 @@ ggplot(dt_linear,aes(x,y))+
   theme(plot.title = element_text(hjust = 0.5)) #to center the plot title.
 ```
 
-![](Assignment5_6-copy_files/figure-gfm/unnamed-chunk-13-4.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/knn/unnamed-chunk-13-4.png?raw=true)<!-- -->
