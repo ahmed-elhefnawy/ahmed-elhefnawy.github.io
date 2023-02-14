@@ -1,0 +1,388 @@
+---
+title: "About Income Distribution"
+excerpt: " "
+collection: portfolio
+output: html_document
+---
+
+```{r setup, include=FALSE, }
+knitr::opts_chunk$set(echo = TRUE,comment = "")
+```
+
+\
+
+Income inequality is a challenge for all countries that governments try to solve or minimize to ensure the welfare of the society's members. 
+
+We try to have a look at two indicators for it. First, **the annual percentage average growth rate in per capita real survey mean consumption or income for the bottom** $\mathbf{40\%}$ **of the population**, whose data is provided by the [World Bank](https://data.worldbank.org/indicator/SI.SPR.PC40.ZG?view=chart). According to the World Bank, "The growth rate in the welfare aggregate of the bottom 40% is computed as the annualized average growth rate in per capita real consumption or income of the bottom 40% of the population in  the income distribution in a country from household surveys over a roughly 5-year period. 
+Mean per capita real consumption or income is measured at 2011 Purchasing Power Parity (PPP) using the [PovcalNet](http://iresearch.worldbank.org/PovcalNet). For some countries means are not reported due to grouped and/or confidential data. 
+The annualized growth rate is computed as:
+\begin{equation}
+[\frac{\text{Mean in final year}}{\text{Mean in initial year}}]^{{1}/{(\text{Final year}) - (\text{Initial year})}} -1
+\end{equation}
+The reference year is the year in which the underlying household survey data was collected. In cases for which the data collection period bridged two calendar years, the first year in which data were collected is reported. The initial year refers to the nearest survey collected 5 years before the most recent survey available, only surveys collected between 3 and 7 years before the most recent survey are considered. The final year refers to the most recent survey available between 2011 and 2015.  Growth rates for Iraq are based on survey means of 2005 PPP\$. The coverage and quality of the 2011 PPP price data for Iraq and most other North African and Middle Eastern countries were hindered by the exceptional period of instability they faced at the time of the 2011 exercise of the International Comparison Program".
+
+The second indicator is **Gini Index**, estimated by the [World Bank](https://data.worldbank.org/indicator/SI.POV.GINI?view=chart). According to the World Bank, "Gini index measures the extent to which the distribution of income (or, in some cases, consumption expenditure) among individuals or households within an economy deviates from a perfectly equal distribution. A Lorenz curve plots the cumulative percentages of total income received against the cumulative number of recipients, starting with the poorest individual or household. The Gini index measures the area between the Lorenz curve and a hypothetical line of absolute equality, expressed as a percentage of the maximum area under the line. Thus a Gini index of 0 represents perfect equality, while an index of 100 implies perfect inequality".
+
+The basic idea is to see the income inequality/distribution alongside the growth rate of real consumption/income per capita for the bottom 40% of the population. We will see that the data doesn't cover all countries neither all years, yet it still can give us a glimpse about income inequality.
+
+To plot Lorenz curve in $R$, you can use `` `r "lorenz.curve()"` `` function in `` `r "lawstat"` `` package, or `` `r "Lc"` `` function in `` `r "ineq"` `` package.
+
+```{r,warning=FALSE,message=FALSE}
+
+#load the packages needed.
+library(readxl)
+library(tidyr)
+library(plotly)
+library(ggiraph)
+library(ggrepel)
+library(DT)
+library(lawstat)
+
+#import the data. I renamed the file as you can see.
+cons<-read_xls("percapitacons.xls")
+
+head(cons)
+
+#remove the first two rows.
+cons<-cons[-c(1:2),]
+
+#rename the columns as the values from the first row.
+colnames(cons)<-cons[1,]
+
+#we don't need the first row anymore, so we can remove it.
+cons<-cons[-c(1),]
+
+#remove the third and fourth columns as we don't need them.
+cons<-cons[,-c(3,4)]
+
+head(cons)
+
+#transform our data from wide format to long format. We called our variable "growth".
+cons<-gather(cons,year,growth,-c(1:2))
+
+#check if "year" is recognized as numeric.
+class(cons$year)
+
+#declare them as numeric.
+cons$year<-as.numeric(cons$year)
+
+#check if "growth" is recognized as numeric.
+class(cons$growth)
+
+#declare it as numeric.
+cons$growth<-as.numeric(cons$growth)
+
+#rename the first two columns.
+colnames(cons)[1:2]<-c("country","code")
+
+head(cons)
+```
+
+Let's have a look at the annual growth of real consumption per capita across countries in a specific year, for example 2018.
+
+```{r}
+#subset our data to only include 2018.
+conssub<-dplyr::filter(cons,year==2018)
+
+#remove the missing values.
+conssub<-na.omit(conssub)
+
+head(conssub)
+
+#I create a vector manually for the classification of countries according to the World Bank.
+level<-c("High income","Upper middle income","High income","High income","Upper middle income","High income","High income","High income","High income","High income","High income","High income","High income","High income","High income","High income","Upper middle income","Upper middle income","Lower middle income","High income","High income","High income","Lower middle income","Upper middle income","High income","Lower middle income","High income","High income","Lower middle income","Lower middle income","High income","High income","High income","Upper middle income","Low income","High income","High income","High income","High income","Lower middle income","High income","Lower middle income")
+
+#merge the vector with our ourdata for 2018.
+conssub$level<-level
+
+#plot our data for 2018.
+ggplotly(ggplot(data=conssub,aes(x=country,y=growth,color=level))+geom_bar(aes(x=country,y=growth),stat="identity")+geom_text(aes(label=code),size=2.5,nudge_y = 0.5)+theme(axis.title.x=element_text(family="Sans-serifs",size=9),axis.text.x = element_blank(),legend.title = element_blank(),axis.title.y = element_text(size=7,family="Sans-serifs"))+scale_y_continuous(breaks = seq(-2,14,by=2))+labs(x="Country", y="Annualized average growth rate of per capita real consumption, 2018, bottom 40% of population (%)"))
+```
+
+The plot is interactive, so you can see the rate for each available country in $2018$.
+
+## **Gini Index:**
+
+Let's start with our second indicator: Gini index.
+
+
+```{r,warning=FALSE,message=FALSE}
+#before we start with gini index data, let's remove the missing values from our original dataset.
+cons<-na.omit(cons)
+
+#import the data. I renamed the file as you can see.
+gini<-read_xls("gini_index.xls")
+
+head(gini)
+
+#remove the first two rows since both are empty.
+gini<-gini[-c(1:2),]
+
+#rename the columns as the first row values.
+colnames(gini)<-gini[1,]
+
+#we don't need the first row anymore, so remove it.
+gini<-gini[-c(1),]
+
+#remove the third and the fourth columns as we don't need them.
+gini<-gini[,-c(3:4)]
+
+#let's see which columns have only missing values. We will remove them later.
+names(which(colSums(is.na(gini))==nrow(gini)))
+
+head(gini)
+
+#transform our data from wide to long format. We named gini index values: "gini".
+gini<-gather(gini,year,gini,-c(1:2))
+
+head(gini)
+
+#check if "year" and "gini" are recognized as numeric.
+class(gini$year)
+class(gini$gini)
+
+#declare both as numeric.
+gini$year<-as.numeric(gini$year)
+gini$gini<-as.numeric(gini$gini)
+
+#now remove the missing values.
+gini<-na.omit(gini)
+
+#rename the columns with shorter names.
+colnames(gini)[1:2]<-c("country","code")
+
+head(gini)
+```
+
+Now, let's merge the two indicators together in one dataset.
+
+```{r}
+
+#merge the two indicators.
+ourdata<-merge(cons,gini)
+
+head(ourdata)
+
+#let's plot both of them.
+girafe(ggobj = ggplot(data=ourdata,mapping = aes(x=gini,y=growth,color=factor(year)))+geom_point_interactive(aes(x=gini,y=growth,color=factor(year),tooltip=country,data_id=country))+geom_text_repel(aes(label=code),size=2)+scale_x_continuous(breaks = seq(20,60,by=5))+scale_y_continuous(breaks = seq(-4,14,by=2))+labs(x="Gini Index",y="Annualized average growth rate of per capita real consumption, bottom 40% of population (%)")+theme_minimal(base_size = 7,base_family = "Sans-serifs")+theme(legend.title = element_blank()))
+```
+
+To see the whole data with the specific values, we may present them in a table.
+
+```{r}
+#first reorder the columns.
+ourdata<-ourdata[,c(2,1,3,4,5)]
+
+#rename the rows properly.
+row.names(ourdata)<-1:nrow(ourdata)
+
+#rename the columns properly.
+colnames(ourdata)[4:5]<-c("Annual percentage average growth of real consumption per capita<br>(bottom 40% of population)","Gini Index")
+
+#present our table.
+datatable(ourdata,options = list(
+ columnDefs = list(list(className = 'dt-center', targets = "_all"))
+),escape=F)
+```
+
+Now the data for both indicators is easily accessible and visualized as well, you can explore it at your comfort.\par
+We didn't infer from the data because of many reasons, one of them is that the data is highly unbalanced, and we removed all the missing values. We don't know why are the missing values are missing, we can't assume randomness because the quality of the surveyed data and the ease of access and collection differ significantly across countries.
+
+
+## **More about the relationship between Gini Index and Lorenz Curve:**
+
+We try to look how can we derive Gini index given Lorenz curve. We will first plot Lorenz curve using income data from surveys conducted in Ilocos, a region in the Philippines, by the Philippines' National Statistics Office. The data is availabe in $R$ under the name `` `r "Ilocos"` `` in `` `r "ineq"` `` package.
+
+```{r}
+
+#load the package.
+library(ineq)
+
+#load the data.
+data("Ilocos")
+
+head(Ilocos)
+
+#subset the data to contain only the income values.
+Ilocos<-Ilocos[,1]
+
+head(Ilocos)
+
+#sort the income values in an ascending order.
+Ilocos<-sort(Ilocos)
+
+#calculate cumulative fraction of the no. of households surveyed.
+percentile_income<-ecdf(Ilocos)(Ilocos)
+
+#merge it with our data.
+Ilocos<-data.frame(Ilocos,percentile_income)
+
+#calculate the empirical ordinary Lorenz curve, which is the cumulative proportion of income.
+Ilocos$value<-cumsum(Ilocos$Ilocos)/sum(Ilocos$Ilocos)
+
+head(Ilocos)
+
+#let's plot our data.
+plot(Ilocos$value~Ilocos$percentile_income,xlab="Cumulative fraction of households",ylab="Cumulative fraction of income",main="Lorenz curve")
+lines(Ilocos$percentile_income,Ilocos$percentile_income)
+```
+
+The plot here is based on our calculation, so let's plot Lorenz curve directly without calculation. 
+
+```{r}
+#plot Lorenz curve directly without calculation.
+plot(Lc(Ilocos$Ilocos))
+```
+
+The line of equality, 45°line, represents a society with perfectly equal income distribution, that's why we plot it in the code with the same values in the $x$-axis and $y$-axis. Lorenz curve shows the inequality by how much Lorenz curve deviates from the line of absolute equality. It intersects with the line of equality at 0 and 1. In addition, Lorenz curve tends to be convex.\par
+Gini coefficient, or index, captures the area between the line of equality and Lorenz curve. 
+
+Let $p$ denotes the cumulative fraction of households, and $L(p)$ denotes the cumulative fraction of income earned by $p$.
+
+To get the area between the two curves, Gini index $G$, we can calculate the difference between their integrals, such that:
+\begin{equation}
+G= 2 \int_{0}^{1} p-L(p)\ dp
+\end{equation}
+We multiply by 2 as a factor to scale the area, so that Gini index lives in the interval [0,1]. We integrate over the interval [0,1] because $(p,L(p))$ strictly live in that interval. You can multiply by 200 if you want the index to live in the interval [0,100] and integrate over [0,100].
+Since the line of equality has to satisfy the condition that $p=L(p)\ \forall \ (p,L(p))$, such that $(p,L(p)) \in [0,1]$, therefore the area under it is 0.5. So,
+\begin{equation}
+\int_{0}^{1} p\ dp = 0.5\\
+\end{equation}
+∴\begin{equation}
+G= 1- 2 \int_{0}^{1} L(p)\ dp
+\end{equation}
+
+Now, the idea is to estimate $L(P)$ to calculate Gini index. Keep in mind that Lorenz curve is not linear, so we might estimate it with a quadratic function.
+For simplicity, assume that: $L(p)=ap^2 +bp$.
+
+```{r}
+
+#create a variable for p-squared.
+Ilocos$percentile_income_sqr<-Ilocos$percentile_income^2
+
+#estimate our function. Note that we assume the intercept to be zero because if the cumulative proportion of households doesn't exist (=0), then they can't earn any income! because they are not there :) 
+lm(value~0+percentile_income+percentile_income_sqr,data=Ilocos)
+```
+
+Therefore, our estimation is:
+\begin{equation}
+L(p)=0.842297 \ p^2 +0.003426 \ p
+\end{equation}
+Let's calculate the definite integral over the interval $[0,1]$:
+\begin{equation}
+\int_{0}^{1} 0.842297 \ p^2 + 0.003426 \ p \ dp \\
+=  0.2807657 \ p^3 + 0.001713 \ p^2  \Big|_0^1 \\
+\\
+=  0.2807657+0.001713 = \mathbf{0.2824787}.
+\end{equation}
+Therefore,
+\begin{equation}
+G= 1-(2*0.2824787) \\
+= \mathbf{0.4350426}
+\end{equation}
+
+Let's go further with a cubic function such that:
+\begin{equation}
+L(p)=ap^3+bp^2+cp
+\end{equation}
+```{r}
+
+#create a new variable for p-cubed.
+Ilocos$percentile_income_cub<-Ilocos$percentile_income^3
+
+#estimate our function.
+lm(value~0+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+```
+
+Therefore,
+\begin{equation}
+L(p)=0.9795 \ p^3-0.4647 \ p^2+0.3958 \ p
+\end{equation}
+
+Then,
+\begin{equation}
+\int_{0}^{1} 0.9795 \ p^3 - 0.4647 \ p^2 + 0.3958 \ p \ dp \\
+= 0.244875 \ p^4 -0.1549 \ p^3+0.1979 \ p^2 \Big|_0^1 \\
+\\
+
+=0.244875-0.1549+0.1979=\mathbf{0.287875}
+\end{equation}
+Therefore,
+\begin{equation}
+G=1-(2*0.287875) \\
+=\mathbf{0.42425}
+\end{equation}
+
+Let's do it with a quartic function: $L(p)=ap^4+bp^3+cp^2+dp$.
+```{r}
+#create p^4
+Ilocos$percentile_income_four<-Ilocos$percentile_income^4
+
+#estimate our function.
+lm(value~0+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_five<-Ilocos$percentile_income^5
+
+#estimate our function.
+lm(value~0+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_six<-Ilocos$percentile_income^6
+
+#estimate our function.
+lm(value~0+percentile_income_six+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_seven<-Ilocos$percentile_income^7
+
+#estimate our function.
+lm(value~0+percentile_income_seven+percentile_income_six+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_eight<-Ilocos$percentile_income^8
+
+#estimate our function.
+lm(value~0+percentile_income_eight+percentile_income_seven+percentile_income_six+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_nine<-Ilocos$percentile_income^9
+
+#estimate our function.
+lm(value~0+percentile_income_nine+percentile_income_eight+percentile_income_seven+percentile_income_six+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_ten<-Ilocos$percentile_income^10
+
+#estimate our function.
+lm(value~0+percentile_income_ten+percentile_income_nine+percentile_income_eight+percentile_income_seven+percentile_income_six+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_eleven<-Ilocos$percentile_income^11
+
+#estimate our function.
+lm(value~0+percentile_income_eleven+percentile_income_ten+percentile_income_nine+percentile_income_eight+percentile_income_seven+percentile_income_six+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+
+Ilocos$percentile_income_twelve<-Ilocos$percentile_income^12
+
+#estimate our function.
+lm(value~0+percentile_income_twelve+percentile_income_eleven+percentile_income_ten+percentile_income_nine+percentile_income_eight+percentile_income_seven+percentile_income_six+percentile_income_five+percentile_income_four+percentile_income_cub+percentile_income_sqr+percentile_income,data=Ilocos)
+```
+
+
+\begin{equation}
+\int_{0}^{1} 1.80008 \ p^4 -2.39830 \ p^3+1.46695 \ p^2+0.07364 \ p \ dp \\
+= 0.360016 \ p^5-0.599575 \ p^4 +0.4889833 \ p^3+0.03682 \ p^2 \Big|_0^1 \\
+
+=0.360016-0.599575+0.4889833+0.03682= \mathbf{0.2862443}.
+\end{equation}
+
+\begin{equation}
+G=1-(2*0.2862443) \\
+=\mathbf{0.4275114}
+\end{equation}
+
+
+Now let's calculate Gini Index directly from $R$ without calculation:
+```{r}
+Gini(Ilocos$Ilocos)
+ineq(Ilocos$Ilocos)
+gini.index(Ilocos$Ilocos)
+```
+
+As you can see, our estimators are very close, with the quartic function as the closest.
+
+And finally, I hope you had fun!
