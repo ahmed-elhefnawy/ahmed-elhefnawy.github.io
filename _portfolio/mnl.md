@@ -1,5 +1,9 @@
-Multinomial Logistic Regression
-================
+---
+title: "Multinomial Logistic Regression"
+excerpt: "Quick application of MNL regression using `cars` dataset"
+collection: portfolio
+---
+
 
 ``` r
 #read and assign the data. I made sure that the data file is in the same working directory as the working directory in R.
@@ -233,7 +237,7 @@ ggplot(dt_cars,aes(x=HP))+
   facet_grid(type~.) #writing the name of the variable before "~" will create the grid in a horizontal format.
 ```
 
-![](Assignment_7-copy_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/mnl/unnamed-chunk-7-1.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -252,7 +256,7 @@ model_tree<-rpart(Drive~HP,data=dt_cars)
 prp(model_tree)
 ```
 
-![](Assignment_7-copy_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/mnl/unnamed-chunk-8-1.png?raw=true)<!-- -->
 
 ``` r
 library(parttree)
@@ -264,7 +268,7 @@ ggplot(dt_cars,aes(x=HP))+
   labs(y="Density")
 ```
 
-![](Assignment_7-copy_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/mnl/unnamed-chunk-8-2.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
@@ -297,7 +301,7 @@ reg_tree<-rpart(CityMPG~HP,data=dt_cars)
 rpart.plot(reg_tree)
 ```
 
-![](Assignment_7-copy_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/mnl/unnamed-chunk-9-1.png?raw=true)<!-- -->
 
 The average CityMPG for the whole data is 20.
 
@@ -366,7 +370,7 @@ ggplot(dt_cars,aes(x=HP,y=CityMPG))+
   scale_y_continuous(breaks = round(sort(c(seq(min(dt_cars$CityMPG,na.rm=TRUE), max(dt_cars$CityMPG,na.rm=TRUE), by=15), City$CityMPG)))) #to display the values of the average CityMPG by using "breaks", but first I round the numbers to the nearest integer, and then sort all the possible values for CityMPG by creating a sequence from its minimum to its maximum alongside the average CityMPG per leaf, and "by" is the difference between each break.
 ```
 
-![](Assignment_7-copy_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/mnl/unnamed-chunk-11-1.png?raw=true)<!-- -->
 
 ------------------------------------------------------------------------
 
