@@ -5,8 +5,7 @@ collection: portfolio
 ---
   
 
-We try to look into the motor gasoline demand in Germany over the period
-![1960-1978](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1960-1978 "1960-1978").
+We try to look into the motor gasoline demand in Germany over the period 1960-1978.
 
 The dataset is available in the package `AER` under the name `OECDGas`.
 It’s also available in the package `plm` under a different name.
@@ -182,9 +181,7 @@ lm(gasq/1000~exp(price),data=gas)
 The quantity here is in thousands as you might expect from the code. The
 demand function here is **limited** because we didn’t control for other
 variables that affect the gas consumption, in addition to the small
-sample size, only
-![19](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;19 "19")
-observations.
+sample size, only 19 observations.
 
 Let’s have a look then on the demand curve!
 
@@ -207,8 +204,7 @@ the gas price but doesn’t directly affect the gas consumption. A good
 example might be gas taxation, which we assume to highly correlates with
 the price and then the gas consumption would be affected through the
 change in the price level, but I couldn’t find a dataset for Germany
-over the period
-![1960-1978](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1960-1978 "1960-1978").
+over the period 1960-1978.
 
 Let’s go with our linear multiple regression!
 
