@@ -260,26 +260,10 @@ ggplot(mapping=aes(x=year,y=value),data=world)+geom_line()+geom_point(aes(color=
 
 ![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-7.png?raw=true)<!-- -->
 
-The emissions varied between
-![3](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;3 "3")
-metric tons per capita and
-![4.75](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;4.75 "4.75")
-metric tons per capita over the period
-![1960-2016](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1960-2016 "1960-2016").
-It started to increase over time. The sharp decline was in the late
-![1980s](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1980s "1980s")
-with steady levels in the
-![1990s](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1990s "1990s")
-until early
-![2000s](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2000s "2000s")
-followed by a sharp increase again.
+The emissions varied between 3
+metric tons per capita and 4.75 metric tons per capita over the period 1960-2016. It started to increase over time. The sharp decline was in the late 1980s with steady levels in the 1990s until early 2000s followed by a sharp increase again.
 
-But we may not be able to properly interpret the real difference between
-![3](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;3 "3")
-metric tons per capita and
-![3.5](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;3.5 "3.5")
-metric tons per capita, so we can see the annual percentage change of
-the emissions over the same period.
+But we may not be able to properly interpret the real difference between 3 metric tons per capita and 3.5 metric tons per capita, so we can see the annual percentage change of the emissions over the same period.
 
 ``` r
 #create a new variable to capture the annual percentage change.
@@ -303,25 +287,9 @@ ggplot(mapping=aes(x=year,y=annual_change),data=world)+geom_line()+geom_point()+
 
 ![](https://github.com/ahmed-elhefnawy/ahmed-elhefnawy.github.io/blob/master/images/unnamed-chunk-8.png?raw=true)<!-- -->
 
-We can see that the highest change was in
-![1970](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1970 "1970")
-with more than
-![7\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;7%5C%25 "7\%")
-increase than
-![1969](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1969 "1969").
-The biggest success was in
-![1992](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1992 "1992")
-when the emissions decreased by more than
-![6\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;6%5C%25 "6\%")
-than the year before. As you can tell now, we only capture the change
-with only one year difference
-(lag=![1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1 "1")),
-but we might have different numbers if we calculated over many years.
+We can see that the highest change was in 1970 with more than 7% increase than 1969. The biggest success was in 1992 when the emissions decreased by more than 6% than the year before. As you can tell now, we only capture the change with only one year difference (lag=![1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1 "1")), but we might have different numbers if we calculated over many years.
 
-For example: let’s see the change from
-![1960](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1960 "1960")
-to
-![2016](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2016 "2016").
+For example: let’s see the change from 1960 to 2016.
 First let’s define how to calculate it: such that
 ![r](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;r "r")
 is the rate of change, and
@@ -338,23 +306,14 @@ Let’s calculate it:
 
     ## [1] -0.7199824
 
-Between
-![1960](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1960 "1960")
-and
-![2016](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;2016 "2016"),
-the metric tons per capita emissions of CO<sub>2</sub> decreased by
-![0.72\\%](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;0.72%5C%25 "0.72\%")
+Between 1960 and 2016, the metric tons per capita emissions of CO<sub>2</sub> decreased by 0.72%
 
 ## **Forecasting:**
 
 Let’s try to make a forecast for the upcoming
-![10](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;10 "10")
-years. First, for the theory behind forecasting, see, for example,
-(Hamilton,
-![1994](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1994 "1994"),
-pp. ![72](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;72 "72")-).
-Also note that all forecasting techniques have its own limitations,
-which you can look for it elsewhere.
+10 years. First, for the theory behind forecasting, see, for example,
+(Hamilton, 1994, pp. 72-).
+Also note that all forecasting techniques have its own limitations, which you can look for it elsewhere.
 
 ``` r
 #first declare the data for R as time series.
@@ -458,8 +417,7 @@ is the Mean Absolute Percentage Error,
 ![MASE](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;MASE "MASE")
 is the Mean Absolute Scaled Error, and
 ![ACF1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;ACF1 "ACF1")
-is the AutoCorrelation of Error at lag
-![1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;1 "1").
+is the AutoCorrelation of Error at lag 1.
 
 ``` r
 #let's forecast!
