@@ -1,6 +1,5 @@
 ---
 title: "Simple forecast of CO<sub>2</sub> emissions"
-excerpt: "Short description"
 collection: portfolio
 ---
   
@@ -553,14 +552,14 @@ for me in the future.
 
 <p style="font-family: times, serif; font-size:11pt; font-style:italic">
 
-- Claeskens, G., Hjort, N. L. (2008): *Model Selection and Model
-  Averaging*. Cambridge: Cambridge University Press.
+- Claeskens, G., Hjort, N. L. (2008): Model Selection and Model
+  Averaging. Cambridge: Cambridge University Press.
 
-- Hamilton, J. D. (1994): *Time Series Analysis*. New Jersey: Princeton
+- Hamilton, J. D. (1994): Time Series Analysis. New Jersey: Princeton
   University Press.
 
-- Hyndman, R. J., Khandakar, Y. (2008): “Automatic Time Series
-  Forecasting: the forecast Package for R”. *Journal of Statistical
-  Software*, Vol.(27)(3), 1-22.
+- Hyndman, R. J., Khandakar, Y. (2008): Automatic Time Series
+  Forecasting: the forecast Package for R. Journal of Statistical
+  Software, Vol.(27)(3), 1-22.
 
 </p>
