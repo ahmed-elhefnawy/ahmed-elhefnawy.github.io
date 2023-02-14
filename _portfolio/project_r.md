@@ -1,5 +1,6 @@
 ---
 title: "Simple forecast of CO<sub>2</sub> emissions"
+excerpt: "Using exponential smoothing for a 10-year forecast"
 collection: portfolio
 ---
   
