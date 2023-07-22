@@ -8,5 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-I am interested in econometrics and statistics, development and environmental economics, finance, market research, and data science. 
+My interest focuses on econometrics and statistics, development and environmental economics, finance, market research, and data science. 
 
