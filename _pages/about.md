@@ -14,5 +14,7 @@ I am Ahmed. I study Business Economics at Martin Luther University Halle-Wittenb
 <br>
 Currently, I am a Research Assistant at the Department of Agricultural Markets, at the Leibniz Institute of Agricultural Development in Transition Economies (IAMO) in Halle. <br>
 <br>
-My interest focuses on econometrics and statistics, development and environmental economics, finance, market research, data science, and machine learning.
+My interest focuses on econometrics and statistics, development and environmental economics, finance, market research, data science, and machine learning. <br>
+<br>
+Beyond my work, I am interested in movies and series, philosophy, classical music, chess, and running. 
 
