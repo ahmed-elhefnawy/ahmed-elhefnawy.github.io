@@ -18,5 +18,6 @@ My interest focuses on econometrics and statistics, development and environmenta
 <br>
 Beyond my work, I am interested in movies and series, philosophy, classical music, chess, and running. <br>
 <br>
-**“It is not true that everyone should follow one path. Listen to your own truth.”** Richard Alpert.
+**“It is not true that everyone should follow one path. Listen to your own truth.”** <br>
+Richard Alpert.
 
