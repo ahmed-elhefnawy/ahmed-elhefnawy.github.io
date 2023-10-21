@@ -10,7 +10,7 @@ redirect_from:
 
 Hello there, <br>
 <br>
-My name is Ahmed. I study Business Economics at Martin Luther University Halle-Wittenberg. I wrote my thesis about the effectiveness of carbon taxation in reducing carbon dioxide emissions in the transport sector. <br>
+I study Business Economics at Martin Luther University Halle-Wittenberg. I wrote my thesis about the effectiveness of carbon taxation in reducing carbon dioxide emissions in the transport sector. <br>
 <br>
 I am a Research Assistant at the Department of Agricultural Markets at the Leibniz Institute of Agricultural Development in Transition Economies (IAMO) in Halle. <br>
 <br>
