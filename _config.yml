@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "A. Elhefnawy"
+title                    : "Ahmed Elhefnawy"
 title_separator          : "-"
-name                     : &name "A. Elhefnawy"
+name                     : &name "Ahmed Elhefnawy"
 description              : &description "personal description"
 url                      : https://elhefnawy.de # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -182,9 +182,9 @@ collections:
   #publications:
    # output: true
     #permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
+#  portfolio:
+ #   output: true
+  #  permalink: /:collection/:path/
   #talks:
    # output: true
     #permalink: /:collection/:path/
