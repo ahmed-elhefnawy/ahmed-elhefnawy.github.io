@@ -8,16 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Hello there, <br>
+Hallo, <br>
 <br>
-I am Ahmed. I study Business Economics at Martin Luther University Halle-Wittenberg. I wrote my thesis about the effectiveness of carbon taxation in reducing carbon dioxide emissions in the transport sector. <br>
+Ich bin Ahmed. Ich studiere Wirtschaftswissenschaften an der Martin-Luther-Universität Halle-Wittenberg. Ich habe meine Abschlussarbeit über die Wirksamkeit der Kohlenstoffbesteuerung zur Reduzierung von Kohlendioxidemissionen im Verkehrssektor geschrieben. <br>
 <br>
-I am a Research Assistant at the Department of Agricultural Markets at the Leibniz Institute of Agricultural Development in Transition Economies (IAMO) in Halle. <br>
+Ich bin wissenschaftlicher Mitarbeiter am Lehrstuhl für Agrarmärkte am Leibniz-Institut für Agrarentwicklung in Transformationsökonomien (IAMO) in Halle. <br>
 <br>
-My interests focus on Econometrics & Statistics, Development & Environmental Economics, Finance, Market Research, Data Science, and Machine Learning. <br>
+Meine Interessen konzentrieren sich auf Ökonometrie & Statistik, Entwicklungs- & Umweltökonomie, Finanzen, Marktforschung, Datenwissenschaft und maschinelles Lernen. <br>
 <br>
-Beyond my work, I am interested in movies and series, philosophy, classical music, chess, and running. <br>
-<br>
-**«It is not true that everyone should follow one path. Listen to your own truth.»** <br>
-— Ram Dass.
 
