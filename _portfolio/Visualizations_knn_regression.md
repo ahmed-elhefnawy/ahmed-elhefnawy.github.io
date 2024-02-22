@@ -2,6 +2,8 @@
 title: "Visualization & knn regression"
 excerpt: "using `cars` dataset"
 collection: portfolio
+date: 2024-02-22
+permalink: /portfolio/knn
 ---
 
   
