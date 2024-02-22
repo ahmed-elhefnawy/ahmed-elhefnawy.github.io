@@ -229,7 +229,7 @@ defaults:
       #share: true
       #comments: true
    _portfolio
- - scope:
+  - scope:
       path: ""
       type: portfolio
     values:
