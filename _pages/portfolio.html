@@ -6,14 +6,25 @@ author_profile: true
 ---
 
 {% include base_path %}
-<div style="margin-bottom: 20px;">
-  <a href="https://elhefnawy.quarto.pub/mnl/" target="_blank" rel="noopener noreferrer">Multinomial Logistic Regression</a>
-  <p>Ich verwende die multinomiale logistische Regression unter Verwendung des Datensatzes „Cars“, um Autoantriebstypen basierend auf Attributen wie PS vorherzusagen, wobei ich Datenaufbereitung, Visualisierung und Analyse mit R einbeziehe.</p>
+<style>
+  .project-link {
+    margin-bottom: 5px; /* Reduces space between the project link and its description */
+  }
+
+  .project-description {
+    margin-bottom: 20px; /* Keeps more space after the description, before the next project */
+  }
+</style>
+
+<div>
+  <a href="https://elhefnawy.quarto.pub/mnl/" target="_blank" rel="noopener noreferrer" class="project-link">Multinomial Logistic Regression</a>
+  <p class="project-description">Ich verwende die multinomiale logistische Regression unter Verwendung des Datensatzes „Cars“, um Autoantriebstypen basierend auf Attributen wie PS vorherzusagen, wobei ich Datenaufbereitung, Visualisierung und Analyse mit R einbeziehe.</p>
 </div>
-<div style="margin-bottom: 20px;">
-  <a href="https://elhefnawy.quarto.pub/2wfe/" target="_blank" rel="noopener noreferrer">Two-way Fixed Effects Model</a>
-  <p>Ich untersuche die hedonische Laufbandhypothese, indem ich die Auswirkungen der Geburt auf das Wohlbefinden der Eltern im Laufe der Zeit untersuche und dabei ein Zwei-Wege-Fixed-Effects-Modell mit Daten des Deutschen Sozio-oekonomischen Panels (SOEP) verwende. Die Analyse konzentriert sich auf die Lebenszufriedenheit vor und nach der Geburt, um die Auswirkungen von Antizipation und Anpassung auf langfristige Glückstrends im Zusammenhang mit wichtigen Lebensereignissen zu untersuchen.</p>
+<div>
+  <a href="https://elhefnawy.quarto.pub/2wfe/" target="_blank" rel="noopener noreferrer" class="project-link">Two-way Fixed Effects Model</a>
+  <p class="project-description">Ich untersuche die hedonische Laufbandhypothese, indem ich die Auswirkungen der Geburt auf das Wohlbefinden der Eltern im Laufe der Zeit untersuche und dabei ein Zwei-Wege-Fixed-Effects-Modell mit Daten des Deutschen Sozio-oekonomischen Panels (SOEP) verwende. Die Analyse konzentriert sich auf die Lebenszufriedenheit vor und nach der Geburt, um die Auswirkungen von Antizipation und Anpassung auf langfristige Glückstrends im Zusammenhang mit wichtigen Lebensereignissen zu untersuchen.</p>
 </div>
+
 
 
 {% for post in site.portfolio %}
