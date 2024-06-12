@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Ahmed Elhefnawy"
   avatar           : "168976589453129.jpeg"
-  bio              : "Wissenschaftliche Hilfskraft"
+  #bio              : "Wissenschaftliche Hilfskraft"
   location         : "Halle (Saale), Deutschland"
   employer         :
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   #googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :  "elhefnawy@iamo.de"
+  email            :  "elhefnawy@mail.de"
   #researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   instagram        :
   #impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "a-elhefnawy/"
+  #linkedin         : "a-elhefnawy/"
   #upwork           : "~01cf139882d26a39b5?viewMode=1"
   #orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
@@ -113,7 +113,7 @@ author:
   #twitter          : "replacethistwitterhandle"
   vine             :
   weibo            :
-  xing             : "Ahmed_Elhefnawy071137/"
+  #xing             : "Ahmed_Elhefnawy071137/"
   youtube          :
   wikipedia        :
 
