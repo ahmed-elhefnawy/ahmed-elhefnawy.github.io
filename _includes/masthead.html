@@ -2,17 +2,18 @@
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+    <!-- make the whole bar a flex row -->
+    <div class="masthead__menu" style="display:flex; align-items:center; width:100%;">
+      <nav id="site-nav" class="greedy-nav" style="flex:1 1 auto;">
         <button><div class="navicon"></div></button>
 
         <ul class="visible-links">
-          <!-- Site title -->
+          <!-- site title -->
           <li class="masthead__menu-item masthead__menu-item--lg">
             <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
 
-          <!-- Localised links -->
+          <!-- localised links -->
           {% assign current_lang = page.lang | default:'de' %}
           {% if current_lang == 'en' %}
             {% assign nav = site.data.navigation_en.main %}
@@ -26,25 +27,24 @@
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item">
+              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            </li>
           {% endfor %}
-
-          <!-- ********  FLEX-SPACER  ******** -->
-          <li style="flex:1 1 auto;"></li>
-
-          <!-- Language toggle -->
-          <li class="masthead__menu-item" style="opacity:.8;font-size:.85em;">
-            {% if current_lang == 'de' or page.url contains '/de/' %}
-              <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
-            {% else %}
-              <a href="{{ page.url | remove_first:'/en' }}" title="Zur deutschen Version wechseln">🇩🇪</a>
-            {% endif %}
-          </li>
         </ul>
 
+        <!-- keeps greedy-nav mobile overflow working -->
         <ul class="hidden-links hidden"></ul>
       </nav>
+
+      <!-- language toggle lives OUTSIDE the <ul>, safe from greedy-nav -->
+      <div class="lang-toggle" style="flex:0 0 auto; padding-left:.75rem; font-size:.85em; opacity:.8;">
+        {% if current_lang == 'de' or page.url contains '/de/' %}
+          <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
+        {% else %}
+          <a href="{{ page.url | remove_first:'/en' }}" title="Zur deutschen Version wechseln">🇩🇪</a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
-
