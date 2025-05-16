@@ -14,11 +14,10 @@
             <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
 
-          <!-- Navigation links -->
+          <!-- Navigation links (localized) -->
           {% assign current_lang = page.lang | default: 'de' %}
           {% assign nav = site.data["navigation_" | append: current_lang].main %}
           {% for link in nav %}
-
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
@@ -29,19 +28,17 @@
             </li>
           {% endfor %}
 
-          <!-- Language toggle with flex alignment -->
+          <!-- Language toggle -->
           <li class="masthead__menu-item lang-toggle-wrap">
-            {% assign current_lang = page.lang | default: 'de' %}
             {% if current_lang == 'de' or page.url contains '/de/' %}
               <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
             {% else %}
               <a href="{{ page.url | remove_first:'/en' }}" title="Zur deutschen Version wechseln">🇩🇪</a>
             {% endif %}
           </li>
-
         </ul>
 
-        <!-- Hidden links (mobile overflow) -->
+        <!-- Hidden links (for nav collapse on mobile) -->
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
