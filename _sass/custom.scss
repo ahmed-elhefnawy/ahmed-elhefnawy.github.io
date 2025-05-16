@@ -1,9 +1,14 @@
-/* Ensure nav links are in a row with language toggle pushed right */
-.greedy-nav .visible-links {
+/* Use a class to safely apply flex only when needed */
+.lang-toggle-wrap {
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
-.greedy-nav .visible-links li:last-child a {
+.lang-toggle-wrap a {
   white-space: nowrap;
+  font-size: 0.85em;
+  opacity: 0.7;
 }
+
