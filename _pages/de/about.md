@@ -1,4 +1,3 @@
-# _pages/de/about.md
 ---
 layout: single
 lang: de
