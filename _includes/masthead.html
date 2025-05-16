@@ -6,24 +6,35 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-          <li class="masthead__menu-item" style="opacity: 0.7; font-size: 0.85em;">
-          {% assign current_lang = page.lang | default: 'de' %}
-          {% if current_lang == 'de' or page.url contains '/de/' %}
-             <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
-          {% else %}
-             <a href="{{ page.url | remove_first:'/en' }}" title="Zur deutschen Version wechseln">🇩🇪</a>
-          {% endif %}
-          </li>
-        </ul>
+  <li class="masthead__menu-item masthead__menu-item--lg">
+    <a href="{{ base_path }}/">{{ site.title }}</a>
+  </li>
+
+  {% for link in site.data.navigation.main %}
+    {% if link.url contains 'http' %}
+      {% assign domain = '' %}
+    {% else %}
+      {% assign domain = base_path %}
+    {% endif %}
+    <li class="masthead__menu-item">
+      <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+    </li>
+  {% endfor %}
+
+  <!-- Spacer to push the toggle to the right -->
+  <li class="masthead__menu-item" style="flex-grow: 1;"></li>
+
+  <!-- Language toggle -->
+  <li class="masthead__menu-item" style="opacity: 0.7; font-size: 0.85em;">
+    {% assign current_lang = page.lang | default: 'de' %}
+    {% if current_lang == 'de' or page.url contains '/de/' %}
+      <a href="/en{{ page.url }}" title="English">🇬🇧</a>
+    {% else %}
+      <a href="{{ page.url | remove_first:'/en' }}" title="Deutsch">🇩🇪</a>
+    {% endif %}
+  </li>
+</ul>
+
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
