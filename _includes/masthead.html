@@ -4,9 +4,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button>
-          <div class="navicon"></div>
-        </button>
+        <button><div class="navicon"></div></button>
 
         <ul class="visible-links">
           <!-- Site title -->
@@ -14,8 +12,8 @@
             <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
 
-          <!-- Navigation links (localized) -->
-          {% assign current_lang = page.lang | default: 'de' %}
+          <!-- Localised links -->
+          {% assign current_lang = page.lang | default:'de' %}
           {% if current_lang == 'en' %}
             {% assign nav = site.data.navigation_en.main %}
           {% else %}
@@ -28,14 +26,14 @@
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-            </li>
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
 
+          <!-- ********  FLEX-SPACER  ******** -->
+          <li style="flex:1 1 auto;"></li>
+
           <!-- Language toggle -->
-          <li class="masthead__menu-item lang-toggle-wrap" 
-              style="margin-left:auto; opacity:0.7; font-size:0.85em;">
+          <li class="masthead__menu-item" style="opacity:.8;font-size:.85em;">
             {% if current_lang == 'de' or page.url contains '/de/' %}
               <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
             {% else %}
@@ -44,9 +42,9 @@
           </li>
         </ul>
 
-        <!-- Hidden links (for nav collapse on mobile) -->
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
+
