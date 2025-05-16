@@ -16,11 +16,11 @@
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
           <li class="masthead__menu-item">
-            {% assign current_lang = page.lang | default: 'en' %}
-            {% if current_lang == 'en' %}
-              <a href="/de{{ page.url | remove_first:'/en' }}">🇩🇪 Deutsch</a>
+            {% assign current_lang = page.lang | default: 'de' %}
+            {% if current_lang == 'de' %}
+               <a href="/en{{ page.url }}">🇬🇧 English</a>
             {% else %}
-              <a href="/en{{ page.url | remove_first:'/de' }}">🇬🇧 English</a>
+               <a href="{{ page.url | remove_first:'/en' }}">🇩🇪 Deutsch</a>
             {% endif %}
           </li>
         </ul>
