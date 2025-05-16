@@ -16,7 +16,12 @@
 
           <!-- Navigation links (localized) -->
           {% assign current_lang = page.lang | default: 'de' %}
-          {% assign nav = site.data["navigation_" | append: current_lang].main %}
+          {% if current_lang == 'en' %}
+            {% assign nav = site.data.navigation_en.main %}
+          {% else %}
+            {% assign nav = site.data.navigation.main %}
+          {% endif %}
+
           {% for link in nav %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
