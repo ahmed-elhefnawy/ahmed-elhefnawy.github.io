@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: single
 lang: en
 permalink: /en/
 title: "Welcome"
