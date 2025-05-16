@@ -18,7 +18,7 @@
           <li class="masthead__menu-item" style="opacity: 0.7; font-size: 0.85em;">
           {% assign current_lang = page.lang | default: 'de' %}
           {% if current_lang == 'de' %}
-            <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
+            <a href="/en{{ page.url }}" title="English">🌐</a>
           {% else %}
             <a href="{{ page.url | remove_first:'/en' }}" title="Zur deutschen Version wechseln">🇩🇪</a>
           {% endif %}
