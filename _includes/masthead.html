@@ -32,9 +32,11 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
+        </ul>
 
-          <!-- Language toggle pushed right with margin-left:auto -->
-          <li class="masthead__menu-item" style="margin-left:auto; opacity: 0.7; font-size: 0.85em;">
+        <!-- Language toggle aligned to the far right using a second <ul> -->
+        <ul class="visible-links" style="margin-left:auto; gap: 0.5em;">
+          <li class="masthead__menu-item" style="opacity: 0.7; font-size: 0.85em;">
             {% if current_lang == 'de' or page.url contains '/de/' %}
               <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
             {% else %}
@@ -43,6 +45,7 @@
           </li>
         </ul>
 
+        <!-- Hidden links (for nav collapse on mobile) -->
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
