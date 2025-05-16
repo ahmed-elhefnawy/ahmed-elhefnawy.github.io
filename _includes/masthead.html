@@ -33,11 +33,8 @@
             </li>
           {% endfor %}
 
-          <!-- Spacer to push language toggle far right -->
-          <li class="masthead__menu-item" style="flex-grow: 1;"></li>
-
-          <!-- Language toggle flags -->
-          <li class="masthead__menu-item" style="opacity: 0.7; font-size: 0.85em;">
+          <!-- Language toggle pushed right with margin-left:auto -->
+          <li class="masthead__menu-item" style="margin-left:auto; opacity: 0.7; font-size: 0.85em;">
             {% if current_lang == 'de' or page.url contains '/de/' %}
               <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
             {% else %}
@@ -48,10 +45,6 @@
 
         <ul class="hidden-links hidden"></ul>
       </nav>
-    </div>
-  </div>
-</div>
-
     </div>
   </div>
 </div>
