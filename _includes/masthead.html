@@ -1,4 +1,4 @@
-{% include base\_path %}
+{% include base_path %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -8,44 +8,45 @@
           <div class="navicon"></div>
         </button>
 
-    <ul class="visible-links">
-      <!-- Site title -->
-      <li class="masthead__menu-item masthead__menu-item--lg">
-        <a href="{{ base_path }}/">{{ site.title }}</a>
-      </li>
+        <ul class="visible-links">
+          <!-- Site title -->
+          <li class="masthead__menu-item masthead__menu-item--lg">
+            <a href="{{ base_path }}/">{{ site.title }}</a>
+          </li>
 
-      <!-- Navigation links (localized) -->
-      {% assign current_lang = page.lang | default: 'de' %}
-      {% if current_lang == 'en' %}
-        {% assign nav = site.data.navigation_en.main %}
-      {% else %}
-        {% assign nav = site.data.navigation.main %}
-      {% endif %}
+          <!-- Navigation links (localized) -->
+          {% assign current_lang = page.lang | default: 'de' %}
+          {% if current_lang == 'en' %}
+            {% assign nav = site.data.navigation_en.main %}
+          {% else %}
+            {% assign nav = site.data.navigation.main %}
+          {% endif %}
 
-      {% for link in nav %}
-        {% if link.url contains 'http' %}
-          {% assign domain = '' %}
-        {% else %}
-          {% assign domain = base_path %}
-        {% endif %}
-        <li class="masthead__menu-item">
-          <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-        </li>
-      {% endfor %}
+          {% for link in nav %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+            {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            <li class="masthead__menu-item">
+              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
 
-      <!-- Language toggle -->
-      <li class="masthead__menu-item lang-toggle-wrap">
-        {% if current_lang == 'de' or page.url contains '/de/' %}
-          <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
-        {% else %}
-          <a href="{{ page.url | remove_first:'/en' }}" title="Zur deutschen Version wechseln">🇩🇪</a>
-        {% endif %}
-      </li>
-    </ul>
+          <!-- Language toggle -->
+          <li class="masthead__menu-item lang-toggle-wrap" style="opacity: 0.7; font-size: 0.85em;">
+            {% if current_lang == 'de' or page.url contains '/de/' %}
+              <a href="/en{{ page.url }}" title="Switch to English">🇬🇧</a>
+            {% else %}
+              <a href="{{ page.url | remove_first:'/en' }}" title="Zur deutschen Version wechseln">🇩🇪</a>
+            {% endif %}
+          </li>
+        </ul>
 
-    <!-- Hidden links (for nav collapse on mobile) -->
-    <ul class="hidden-links hidden"></ul>
-  </nav>
-</div>
+        <!-- Hidden links (for nav collapse on mobile) -->
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
   </div>
 </div>
+
