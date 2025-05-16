@@ -7,7 +7,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Ich studiere derzeit **Sustainable Management & Technology (M.Sc.)** an der Technischen Universität München (TUM) und spezialisiere mich auf **Biotechnologie und Materialwissenschaft**.
+##Grüß Gott!
+Ich bin Ahmed. Ich studiere derzeit **Sustainable Management & Technology (M.Sc.)** an der Technischen Universität München (TUM) und spezialisiere mich auf **Biotechnologie und Materialwissenschaft**.
 
 Derzeit arbeite ich am **ifo Institut** in einem Projekt, das untersucht, wie unterschiedliches Investitionsverhalten die Energiewende in Europa – insbesondere den Strommarkt – beeinflusst. Am **SODA Lab** der LMU München bin ich an einem gemeinsamen Vorhaben mit der **Deutschen Bundesbank** beteiligt, in dem wir ML-, NLP- und LLM-Methoden einsetzen, um firmenspezifische Daten aus Nachhaltigkeitsberichten zu extrahieren.
 
