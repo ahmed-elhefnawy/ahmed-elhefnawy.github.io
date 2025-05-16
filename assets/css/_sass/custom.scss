@@ -1,0 +1,9 @@
+/* Ensure nav links are in a row with language toggle pushed right */
+.greedy-nav .visible-links {
+  display: flex;
+  align-items: center;
+}
+
+.greedy-nav .visible-links li:last-child a {
+  white-space: nowrap;
+}
