@@ -8,7 +8,7 @@ author_profile: true
 ## Welcome!
 I am Ahmed. I am a Master's student in Sustainable Management & Technology at the <a href="https://www.cs.tum.de/en/study/master/sustainable-management-technology" target="_blank">Technical University of Munich (TUM)</a>, majoring in **Biotechnology & Materials Science**. Currently, I am an exchange student at the University of Zurich & ETH Zurich.
 
-I work at the <a href="https://www.ifo.de/en/ifo-homepage" target="_blank">ifo Institute</a> on a project on how different investment behavior influences the energy transition in Europe, particularly the electricity market. At <a href="https://www.stat.lmu.de/soda/en/" target="_blank">SODA Lab</a>, LMU Munich, I am involved in a project with the Deutsche Bundesbank to extract firm-level data from companies' sustainability reports using ML, NLP, and LLMs.
+I work at the <a href="https://www.ifo.de/en/ifo-homepage" target="_blank">ifo Institute</a> on a project on how different investment behavior influences the energy transition in Europe, particularly the electricity market. At <a href="https://www.stat.lmu.de/soda/en/" target="_blank">SODA Lab</a>, LMU Munich, I am involved in a project with the Deutsche Bundesbank to extract firm-level data from companies' sustainability reports using Machine Learning and Natural Language Processing.
 
 My interests include **(corporate) sustainability & ESG management, energy & climate analytics (Green Tech), (data-driven) consulting & economic analysis, data science & ML**, and I love to extract meaningful insights from unstructured information. 
 
