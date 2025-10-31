@@ -8,15 +8,16 @@ redirect_from:
   - /about.html
 ---
 ## Guten Tag!
-Ich bin Ahmed. Ich studiere derzeit Sustainable Management & Technology (M.Sc.) an der <a href="https://www.cs.tum.de/en/study/master/sustainable-management-technology" target="_blank">Technischen Universität München (TUM)</a> und spezialisiere mich auf **Biotechnologie und Materialwissenschaft**.
+Ich bin Ahmed, Masterstudent im Studiengang Sustainable Management & Technology an der Technischen Universität München (TUM) mit der Vertiefungsrichtung **Biotechnologie & Materialwissenschaften**. Derzeit bin ich Austauschstudent an der Universität Zürich und der ETH Zürich.  
 
-Derzeit arbeite ich am <a href="https://www.ifo.de/ifo-startseite" target="_blank">ifo Institut</a> in einem Projekt, das untersucht, wie unterschiedliches Investitionsverhalten die Energiewende in Europa – insbesondere den Strommarkt – beeinflusst. Am <a href="https://www.stat.lmu.de/soda/en/" target="_blank">SODA Lab</a> der LMU München bin ich an einem gemeinsamen Vorhaben mit der Deutschen Bundesbank beteiligt, in dem wir ML-, NLP- und LLM-Methoden einsetzen, um firmenspezifische Daten aus Nachhaltigkeitsberichten zu extrahieren.
+Am <a href="https://www.ifo.de/" target="_blank">ifo Institut</a> arbeite ich an einem Projekt, das untersucht, wie unterschiedliche Investitionsverhalten den Übergang zu einer nachhaltigen Energieversorgung in Europa – insbesondere im Strommarkt – beeinflussen. Zudem bin ich am <a href="https://www.stat.lmu.de/soda/" target="_blank">SODA Lab</a> der LMU München an einem Projekt mit der Deutschen Bundesbank beteiligt, bei dem mithilfe von ML-, NLP- und LLM-Technologien unternehmensspezifische Daten aus Nachhaltigkeitsberichten extrahiert werden.  
 
-Meine Interessen liegen insbesondere in den Bereichen **Nachhaltigkeit & ESG management**, **Energie- und Klimaanalytik (Green Tech)**, **(Datenbasierte) Beratung und Wirtschaftsanalyse** sowie **Data Science und Machine Learning** – insbesondere darin, aus unstrukturierten Informationen verwertbare Erkenntnisse zu gewinnen.
+Meine Interessen liegen in den Bereichen **(Corporate) Sustainability & ESG-Management, Energie- und Klimaanalytik (Green Tech), datengetriebene Beratung & wirtschaftliche Analyse sowie Data Science & Machine Learning**. Besonders fasziniert mich, aus unstrukturierten Informationen wertvolle Erkenntnisse zu gewinnen.  
 
-Als von der <a href="https://www.ja.tum.de/ja/projekte/class-2025/kunst/" target="_blank">TUM: Junge Akademie (TUMJA)</a> nominierter Stipendiat arbeite ich mit vier Kommiliton\*innen daran, die Hindernisse für eine großflächige Einführung von **Seealgen-Verpackungen** im Lebensmittelsektor zu analysieren und mit herkömmlichen Kunststofflösungen zu vergleichen.
+Ich fühle mich geehrt, für die <a href="https://www.ja.tum.de/ja/projekte/class-2025/kunst/" target="_blank">TUM: Junge Akademie (TUMJA)</a> nominiert zu sein – das Stipendienprogramm der TUM für engagierte und talentierte Studierende. Unser vierköpfiges Team erforscht unter der Betreuung von Prof. Dr. Claudia Doblinger die **Hemmnisse für die großflächige Einführung von Algen-basierten Verpackungen** im Lebensmittelsektor im Vergleich zu herkömmlichen Kunststoffverpackungen.  
 
-Praxisnah arbeite ich routiniert mit **Python, R, Stata, Git** und **LaTeX**.
+In der Praxis arbeite ich sicher mit **Python, R, Stata, Git** und **LaTeX**.  
 
-In meiner Freizeit gehe ich gerne ins Kino, sehe Filme, lese, befasse mich mit Philosophie und gehe gelegentlich joggen.
+In meiner Freizeit gehe ich gerne ins Kino, lese, beschäftige mich mit philosophischen Inhalten und laufe gelegentlich.
+
 
