@@ -10,7 +10,7 @@ redirect_from:
 ## Guten Tag!
 Ich bin Ahmed, Masterstudent im Studiengang Sustainable Management & Technology an der Technischen Universität München (TUM) mit der Vertiefungsrichtung **Biotechnologie & Materialwissenschaften**. Derzeit bin ich Austauschstudent an der Universität Zürich und der ETH Zürich.
 
-Am <a href="https://www.ifo.de/en/ifo-homepage" target="_blank">ifo Institut</a> arbeite ich an einem Projekt, das untersucht, wie unterschiedliche Investitionsverhalten die Energiewende in Europa – insbesondere den Strommarkt – beeinflussen. Am <a href="https://www.stat.lmu.de/soda/en/" target="_blank">SODA Lab</a> der LMU München bin ich an einem Projekt mit der Deutschen Bundesbank beteiligt, bei dem mithilfe von ML, NLP und LLMs unternehmensbezogene Daten aus Nachhaltigkeitsberichten extrahiert werden.
+Am <a href="https://www.ifo.de/en/ifo-homepage" target="_blank">ifo Institut</a> arbeite ich an einem Projekt, das untersucht, wie unterschiedliche Investitionsverhalten die Energiewende in Europa – insbesondere den Strommarkt – beeinflussen. Am <a href="https://www.stat.lmu.de/soda/en/" target="_blank">SODA Lab</a> der LMU München bin ich an einem Projekt mit der Deutschen Bundesbank beteiligt, bei dem mithilfe von Machine Learning und Natural Language Processing unternehmensbezogene Daten aus Nachhaltigkeitsberichten extrahiert werden.
 
 Meine Interessen umfassen **(Corporate) Sustainability & ESG-Management, Energie- und Klimaanalytik (Green Tech), (datengetriebene) Beratung & wirtschaftliche Analyse sowie Data Science & ML**. Besonders fasziniert mich, aus unstrukturierten Informationen aussagekräftige Erkenntnisse zu gewinnen.
 
