@@ -12,7 +12,7 @@ I work at the <a href="https://www.ifo.de/en/ifo-homepage" target="_blank">ifo I
 
 My interests include **(corporate) sustainability & ESG management, energy & climate analytics (Green Tech), (data-driven) consulting & economic analysis, data science & ML**, and I love to extract meaningful insights from unstructured information. 
 
-Honoured to be nominated for <a href="https://www.ja.tum.de/ja/projekte/class-2025/kunst/" target="_blank">TUM: Junge Akademie (TUMJA)</a>, the scholarship program of TUM for talented and dedicated students, our team of five students is working on understanding the barriers to large-scale adoption of **seaweed-based packaging** in the food sector, particularly in comparison to traditional plastic packaging.
+Honoured to be nominated for <a href="https://www.ja.tum.de/ja/projekte/class-2025/kunst/" target="_blank">TUM: Junge Akademie (TUMJA)</a>, the scholarship program of TUM for talented and dedicated students, our team of four students is working on understanding the barriers to large-scale adoption of **seaweed-based packaging** in the food sector, particularly in comparison to traditional plastic packaging, supervised by Prof. Dr. Claudia Doblinger.
 
 In practice, I am comfortable working with **Python, R, Stata, Git**, and **LaTeX**. 
 
